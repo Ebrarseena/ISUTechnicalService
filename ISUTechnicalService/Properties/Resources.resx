@@ -118,85 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="man-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\man-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="randevu-oluştur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\randevu-oluştur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Monitor picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Monitor picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1200x630wa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1200x630wa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3439971" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3439971.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pc2.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="technical" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\technical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blgs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blgs.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="randevu-oluştur1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\randevu-oluştur1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vector-for-free-use-desktop-computer-icon-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vector-for-free-use-desktop-computer-icon-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="profesyonel-teknik-servis" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profesyonel-teknik-servis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="207-2074901_woman-icon-avatar-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\207-2074901_woman-icon-avatar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pc3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pc3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="istockphoto-817298388-170667a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-817298388-170667a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="personel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\personel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OriginalPng 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OriginalPng 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="3616883" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3616883.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Customerr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Customerr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="personel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pixelbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pixelbook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vector-for-free-use-desktop-computer-icon-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vector-for-free-use-desktop-computer-icon-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="istockphoto-817298388-170667a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-817298388-170667a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Huawei" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Huawei.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="technical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\technical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1200x630wa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200x630wa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Monitor picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Monitor picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Huawei" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Huawei.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OriginalPng 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OriginalPng 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pc2.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pc3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pc3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blgs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blgs.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-for-free-use-desktop-computer-icon-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-for-free-use-desktop-computer-icon-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customerr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customerr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3439971" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3439971.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="personel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\personel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1200x630wa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1200x630wa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-for-free-use-desktop-computer-icon-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-for-free-use-desktop-computer-icon-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pixelbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pixelbook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="randevu-oluştur1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\randevu-oluştur1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profesyonel-teknik-servis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profesyonel-teknik-servis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="man-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\man-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="207-2074901_woman-icon-avatar-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\207-2074901_woman-icon-avatar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="randevu-oluştur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\randevu-oluştur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash-money-finance-debt-icon-orange-vector-design-use-designing-developing-websites-commercial-purposes-web-any-type-229927353" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash-money-finance-debt-icon-orange-vector-design-use-designing-developing-websites-commercial-purposes-web-any-type-229927353.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

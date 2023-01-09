@@ -123,6 +123,17 @@ namespace ISUTechnicalService.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cash_money_finance_debt_icon_orange_vector_design_use_designing_developing_websites_commercial_purposes_web_any_type_229927353 {
+            get {
+                object obj = ResourceManager.GetObject("cash-money-finance-debt-icon-orange-vector-design-use-designing-developing-websit" +
+                        "es-commercial-purposes-web-any-type-229927353", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Customerr {
             get {
                 object obj = ResourceManager.GetObject("Customerr", resourceCulture);
@@ -146,6 +157,16 @@ namespace ISUTechnicalService.Properties {
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap indir {
+            get {
+                object obj = ResourceManager.GetObject("indir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
