@@ -74,11 +74,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 489);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 500);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1166, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(1168, 247);
             this.dataGridView1.TabIndex = 0;
             // 
             // txtTC
@@ -327,10 +327,10 @@
             // 
             this.dropDownButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dropDownButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("dropDownButton1.ImageOptions.SvgImage")));
-            this.dropDownButton1.Location = new System.Drawing.Point(1495, 32);
+            this.dropDownButton1.Location = new System.Drawing.Point(1013, 20);
             this.dropDownButton1.Margin = new System.Windows.Forms.Padding(5);
             this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(201, 64);
+            this.dropDownButton1.Size = new System.Drawing.Size(176, 44);
             this.dropDownButton1.TabIndex = 33;
             this.dropDownButton1.Text = "Search";
             // 
@@ -385,9 +385,9 @@
             this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndelete.ImageKey = "icons8-trash-50.png";
             this.btndelete.ImageList = this.ımageList2;
-            this.btndelete.Location = new System.Drawing.Point(774, 429);
+            this.btndelete.Location = new System.Drawing.Point(774, 447);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(170, 35);
+            this.btndelete.Size = new System.Drawing.Size(181, 35);
             this.btndelete.TabIndex = 15;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
@@ -401,9 +401,9 @@
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.ImageKey = "icons8-available-updates-50.png";
             this.btnupdate.ImageList = this.ımageList2;
-            this.btnupdate.Location = new System.Drawing.Point(487, 429);
+            this.btnupdate.Location = new System.Drawing.Point(496, 447);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(170, 35);
+            this.btnupdate.Size = new System.Drawing.Size(179, 35);
             this.btnupdate.TabIndex = 14;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
@@ -417,9 +417,9 @@
             this.btncreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncreate.ImageKey = "icons8-add-folder-64.png";
             this.btncreate.ImageList = this.ımageList2;
-            this.btncreate.Location = new System.Drawing.Point(200, 429);
+            this.btncreate.Location = new System.Drawing.Point(220, 447);
             this.btncreate.Name = "btncreate";
-            this.btncreate.Size = new System.Drawing.Size(170, 35);
+            this.btncreate.Size = new System.Drawing.Size(176, 35);
             this.btncreate.TabIndex = 13;
             this.btncreate.Text = "CREATE";
             this.btncreate.UseVisualStyleBackColor = false;
@@ -429,7 +429,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1215, 758);
+            this.ClientSize = new System.Drawing.Size(1208, 766);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

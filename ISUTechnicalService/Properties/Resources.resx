@@ -121,9 +121,6 @@
   <data name="pc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="man-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\man-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,8 +145,11 @@
   <data name="blgs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blgs.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Huawei" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Huawei.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="randevu-oluştur1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\randevu-oluştur1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-for-free-use-desktop-computer-icon-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-for-free-use-desktop-computer-icon-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profesyonel-teknik-servis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profesyonel-teknik-servis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,14 +160,20 @@
   <data name="pc3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pc3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="randevu-oluştur1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\randevu-oluştur1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="personel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\personel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OriginalPng 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OriginalPng 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3616883" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3616883.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Customerr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Customerr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +187,8 @@
   <data name="istockphoto-817298388-170667a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\istockphoto-817298388-170667a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vector-for-free-use-desktop-computer-icon-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vector-for-free-use-desktop-computer-icon-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Huawei" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Huawei.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1200x630wa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200x630wa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,10 +196,7 @@
   <data name="personel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\personel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3616883" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3616883.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
