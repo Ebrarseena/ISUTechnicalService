@@ -38,7 +38,6 @@
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtTrouble = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,6 +65,7 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,6 +80,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1168, 247);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // txtTC
             // 
@@ -129,13 +130,6 @@
             this.txtTrouble.Name = "txtTrouble";
             this.txtTrouble.Size = new System.Drawing.Size(140, 22);
             this.txtTrouble.TabIndex = 8;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(988, 294);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(140, 22);
-            this.txtStatus.TabIndex = 9;
             // 
             // txtPrice
             // 
@@ -255,7 +249,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label9.Location = new System.Drawing.Point(931, 294);
+            this.label9.Location = new System.Drawing.Point(931, 297);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 26;
@@ -327,10 +321,10 @@
             // 
             this.dropDownButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dropDownButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("dropDownButton1.ImageOptions.SvgImage")));
-            this.dropDownButton1.Location = new System.Drawing.Point(1013, 20);
-            this.dropDownButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.dropDownButton1.Location = new System.Drawing.Point(1266, 25);
+            this.dropDownButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(176, 44);
+            this.dropDownButton1.Size = new System.Drawing.Size(220, 55);
             this.dropDownButton1.TabIndex = 33;
             this.dropDownButton1.Text = "Search";
             // 
@@ -391,6 +385,7 @@
             this.btndelete.TabIndex = 15;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnupdate
             // 
@@ -407,6 +402,7 @@
             this.btnupdate.TabIndex = 14;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btncreate
             // 
@@ -423,6 +419,17 @@
             this.btncreate.TabIndex = 13;
             this.btncreate.Text = "CREATE";
             this.btncreate.UseVisualStyleBackColor = false;
+            this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(988, 295);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(86, 20);
+            this.radioButton1.TabIndex = 36;
+            this.radioButton1.Text = "Complete";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // DeviceTroubleRecord
             // 
@@ -430,6 +437,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1208, 766);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -454,7 +462,6 @@
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btncreate);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtTrouble);
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.txtBrand);
@@ -484,7 +491,6 @@
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtTrouble;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btncreate;
         private System.Windows.Forms.Button btnupdate;
@@ -512,5 +518,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
