@@ -60,6 +60,7 @@ namespace ISUTechnicalService
             newDataRow.Cells[3].Value = txtModel.Text;
             newDataRow.Cells[4].Value = txtPrice.Text;
             newDataRow.Cells[5].Value = txtStock.Text;
+            MessageBox.Show("Successfully updated!");
             txtCategory.Clear();
             txtBrand.Clear();
             txtModel.Clear();
@@ -73,6 +74,7 @@ namespace ISUTechnicalService
             StockTracking stock = model.StockTracking.FirstOrDefault(x => x.ID == select);
             model.StockTracking.Remove(stock);
             model.SaveChanges();
+            MessageBox.Show("Deletion completed");
             fill();
         }
 

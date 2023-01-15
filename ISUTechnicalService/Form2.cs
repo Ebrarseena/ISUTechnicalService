@@ -77,6 +77,7 @@ namespace ISUTechnicalService
             newDataRow.Cells[4].Value = radioButton1.Checked;
             newDataRow.Cells[5].Value = txtPrice.Text;
             newDataRow.Cells[6].Value = pickerDate.Text;
+            MessageBox.Show("Successfully updated!");
             txtBrand.Clear();
             txtModel.Clear();
             txtTrouble.Clear();
@@ -91,6 +92,7 @@ namespace ISUTechnicalService
             Deviceİnfo device = model.Deviceİnfo.FirstOrDefault(x => x.ID == select);
             model.Deviceİnfo.Remove(device);
             model.SaveChanges();
+            MessageBox.Show("Deletion completed");
             fill();
         }
 
