@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,41 +60,43 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1142, 293);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // textBox1
+            // txtCategory
             // 
-            this.textBox1.Location = new System.Drawing.Point(291, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 22);
-            this.textBox1.TabIndex = 17;
+            this.txtCategory.Location = new System.Drawing.Point(291, 141);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(171, 22);
+            this.txtCategory.TabIndex = 17;
             // 
-            // textBox2
+            // txtBrand
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 195);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 22);
-            this.textBox2.TabIndex = 18;
+            this.txtBrand.Location = new System.Drawing.Point(291, 195);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(171, 22);
+            this.txtBrand.TabIndex = 18;
             // 
-            // textBox3
+            // txtModel
             // 
-            this.textBox3.Location = new System.Drawing.Point(291, 262);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 22);
-            this.textBox3.TabIndex = 19;
+            this.txtModel.Location = new System.Drawing.Point(291, 262);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(171, 22);
+            this.txtModel.TabIndex = 19;
             // 
-            // textBox4
+            // txtPrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(840, 163);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 22);
-            this.textBox4.TabIndex = 20;
+            this.txtPrice.Location = new System.Drawing.Point(840, 163);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(171, 22);
+            this.txtPrice.TabIndex = 20;
             // 
-            // textBox5
+            // txtStock
             // 
-            this.textBox5.Location = new System.Drawing.Point(840, 237);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 22);
-            this.textBox5.TabIndex = 21;
+            this.txtStock.Location = new System.Drawing.Point(840, 237);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(171, 22);
+            this.txtStock.TabIndex = 21;
             // 
             // label1
             // 
@@ -189,12 +191,13 @@
             this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndelete.ImageKey = "icons8-trash-50.png";
             this.btndelete.ImageList = this.ımageList1;
-            this.btndelete.Location = new System.Drawing.Point(758, 362);
+            this.btndelete.Location = new System.Drawing.Point(758, 360);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(188, 35);
+            this.btndelete.Size = new System.Drawing.Size(188, 37);
             this.btndelete.TabIndex = 16;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnupdate
             // 
@@ -205,12 +208,13 @@
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.ImageKey = "icons8-available-updates-50.png";
             this.btnupdate.ImageList = this.ımageList1;
-            this.btnupdate.Location = new System.Drawing.Point(497, 362);
+            this.btnupdate.Location = new System.Drawing.Point(497, 360);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(188, 35);
+            this.btnupdate.Size = new System.Drawing.Size(188, 37);
             this.btnupdate.TabIndex = 15;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btncreate
             // 
@@ -221,12 +225,13 @@
             this.btncreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncreate.ImageKey = "icons8-add-folder-64.png";
             this.btncreate.ImageList = this.ımageList1;
-            this.btncreate.Location = new System.Drawing.Point(230, 362);
+            this.btncreate.Location = new System.Drawing.Point(236, 360);
             this.btncreate.Name = "btncreate";
-            this.btncreate.Size = new System.Drawing.Size(188, 35);
+            this.btncreate.Size = new System.Drawing.Size(188, 37);
             this.btncreate.TabIndex = 14;
             this.btncreate.Text = "CREATE";
             this.btncreate.UseVisualStyleBackColor = false;
+            this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
             // 
             // Stock
             // 
@@ -241,16 +246,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtStock);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtModel);
+            this.Controls.Add(this.txtBrand);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btncreate);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -265,11 +271,11 @@
         private System.Windows.Forms.Button btncreate;
         private System.Windows.Forms.Button btnupdate;
         private System.Windows.Forms.Button btndelete;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.TextBox txtBrand;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

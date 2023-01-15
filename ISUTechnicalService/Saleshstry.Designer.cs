@@ -38,13 +38,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtIdentity = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtProcess = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -53,6 +52,7 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -145,54 +145,47 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Price:";
             // 
-            // textBox1
+            // txtIdentity
             // 
-            this.textBox1.Location = new System.Drawing.Point(298, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 8;
+            this.txtIdentity.Location = new System.Drawing.Point(298, 126);
+            this.txtIdentity.Name = "txtIdentity";
+            this.txtIdentity.Size = new System.Drawing.Size(167, 22);
+            this.txtIdentity.TabIndex = 8;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(298, 183);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 22);
-            this.textBox2.TabIndex = 9;
+            this.txtName.Location = new System.Drawing.Point(298, 183);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(167, 22);
+            this.txtName.TabIndex = 9;
             // 
-            // textBox3
+            // txtSurname
             // 
-            this.textBox3.Location = new System.Drawing.Point(298, 239);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 22);
-            this.textBox3.TabIndex = 10;
+            this.txtSurname.Location = new System.Drawing.Point(298, 239);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(167, 22);
+            this.txtSurname.TabIndex = 10;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(298, 289);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 22);
-            this.textBox4.TabIndex = 11;
+            this.txtEmail.Location = new System.Drawing.Point(298, 289);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(167, 22);
+            this.txtEmail.TabIndex = 11;
             // 
-            // textBox5
+            // txtProcess
             // 
-            this.textBox5.Location = new System.Drawing.Point(816, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 22);
-            this.textBox5.TabIndex = 12;
+            this.txtProcess.Location = new System.Drawing.Point(816, 180);
+            this.txtProcess.Name = "txtProcess";
+            this.txtProcess.Size = new System.Drawing.Size(167, 22);
+            this.txtProcess.TabIndex = 13;
             // 
-            // textBox6
+            // txtPrice
             // 
-            this.textBox6.Location = new System.Drawing.Point(816, 180);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(167, 22);
-            this.textBox6.TabIndex = 13;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(816, 240);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(167, 22);
-            this.textBox7.TabIndex = 14;
+            this.txtPrice.Location = new System.Drawing.Point(816, 240);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(167, 22);
+            this.txtPrice.TabIndex = 14;
             // 
             // label9
             // 
@@ -221,6 +214,8 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1158, 298);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // ımageList1
             // 
@@ -233,7 +228,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ISUTechnicalService.Properties.Resources.indir;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(-14, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 104);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -249,12 +244,13 @@
             this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndelete.ImageKey = "icons8-trash-50.png";
             this.btndelete.ImageList = this.ımageList1;
-            this.btndelete.Location = new System.Drawing.Point(762, 366);
+            this.btndelete.Location = new System.Drawing.Point(755, 366);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(188, 35);
+            this.btndelete.Size = new System.Drawing.Size(188, 38);
             this.btndelete.TabIndex = 21;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnupdate
             // 
@@ -265,12 +261,13 @@
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.ImageKey = "icons8-available-updates-50.png";
             this.btnupdate.ImageList = this.ımageList1;
-            this.btnupdate.Location = new System.Drawing.Point(490, 366);
+            this.btnupdate.Location = new System.Drawing.Point(487, 366);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(188, 35);
+            this.btnupdate.Size = new System.Drawing.Size(188, 38);
             this.btnupdate.TabIndex = 20;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btncreate
             // 
@@ -281,12 +278,22 @@
             this.btncreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncreate.ImageKey = "icons8-add-folder-64.png";
             this.btncreate.ImageList = this.ımageList1;
-            this.btncreate.Location = new System.Drawing.Point(205, 366);
+            this.btncreate.Location = new System.Drawing.Point(222, 366);
             this.btncreate.Name = "btncreate";
-            this.btncreate.Size = new System.Drawing.Size(188, 35);
+            this.btncreate.Size = new System.Drawing.Size(188, 38);
             this.btncreate.TabIndex = 19;
             this.btncreate.Text = "CREATE";
             this.btncreate.UseVisualStyleBackColor = false;
+            this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(816, 126);
+            this.maskedTextBox1.Mask = "(999) 000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(167, 22);
+            this.maskedTextBox1.TabIndex = 23;
+            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Saleshstry
             // 
@@ -294,6 +301,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1203, 752);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnupdate);
@@ -301,13 +309,12 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtProcess);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtIdentity);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -317,6 +324,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Saleshstry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saleshstry";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -335,13 +343,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtIdentity;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtProcess;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -350,5 +357,6 @@
         private System.Windows.Forms.Button btnupdate;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

@@ -22,8 +22,8 @@ namespace ISUTechnicalService
         public DeviceTroubleRecord()
         {
             InitializeComponent();
-            List<Deviceİnfo> deviceinfo = model.Deviceİnfo.ToList();
-            dataGridView1.DataSource = deviceinfo;
+            List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList();
+            dataGridView1.DataSource = deviceinfos;
         }
 
         private void fill()
@@ -105,6 +105,16 @@ namespace ISUTechnicalService
             txtPrice.Text = row.Cells[5].Value.ToString();
             pickerDate.Text = row.Cells[6].Value.ToString();
             model.SaveChanges();
+        }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var value = dataGridView1.SelectedCells[0].Value.ToString();
+            select = Convert.ToInt32(value);
+        }
+
+        private void btnexcel_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

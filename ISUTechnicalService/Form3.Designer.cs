@@ -65,8 +65,8 @@
             // 
             this.btndevice.Caption = "Device Record";
             this.btndevice.Id = 1;
-            this.btndevice.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btndevice.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btndevice.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btndevice.ImageOptions.Image")));
+            this.btndevice.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btndevice.ImageOptions.LargeImage")));
             this.btndevice.ItemAppearance.Normal.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btndevice.ItemAppearance.Normal.Options.UseFont = true;
             this.btndevice.Name = "btndevice";
@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 670);
+            this.ClientSize = new System.Drawing.Size(1228, 892);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "Form3";

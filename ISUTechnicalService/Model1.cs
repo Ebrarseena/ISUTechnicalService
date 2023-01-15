@@ -15,6 +15,7 @@ namespace ISUTechnicalService
         public virtual DbSet<AdminPanel> AdminPanel { get; set; }
         public virtual DbSet<Customerİnfo> Customerİnfo { get; set; }
         public virtual DbSet<Deviceİnfo> Deviceİnfo { get; set; }
+
         public virtual DbSet<Payment> Payment { get; set; }
         public virtual DbSet<SalesHistory> SalesHistory { get; set; }
         public virtual DbSet<StockTracking> StockTracking { get; set; }

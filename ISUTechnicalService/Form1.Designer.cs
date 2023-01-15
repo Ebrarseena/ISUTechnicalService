@@ -188,6 +188,7 @@
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txtPassword);
             this.Name = "LOGİN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGİN";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LOGİN_FormClosed);
             this.Load += new System.EventHandler(this.LOGİN_Load);

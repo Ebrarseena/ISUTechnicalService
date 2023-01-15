@@ -46,11 +46,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -234,13 +234,6 @@
             this.textBox4.Size = new System.Drawing.Size(163, 22);
             this.textBox4.TabIndex = 17;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(228, 517);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 22);
-            this.textBox5.TabIndex = 18;
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(831, 272);
@@ -273,17 +266,26 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "STATUS:";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(228, 517);
+            this.maskedTextBox1.Mask = "(999) 000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(163, 22);
+            this.maskedTextBox1.TabIndex = 23;
+            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1202, 754);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -303,6 +305,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Transactions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transactions";
             this.Load += new System.EventHandler(this.Transactions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -332,10 +335,10 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

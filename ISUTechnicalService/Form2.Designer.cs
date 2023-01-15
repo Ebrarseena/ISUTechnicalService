@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceTroubleRecord));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtTC = new System.Windows.Forms.TextBox();
@@ -61,7 +62,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnexcel = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
@@ -73,6 +74,14 @@
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 500);
             this.dataGridView1.Name = "dataGridView1";
@@ -80,6 +89,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1168, 247);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // txtTC
@@ -322,7 +332,7 @@
             this.dropDownButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dropDownButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("dropDownButton1.ImageOptions.SvgImage")));
             this.dropDownButton1.Location = new System.Drawing.Point(1266, 25);
-            this.dropDownButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dropDownButton1.Margin = new System.Windows.Forms.Padding(6);
             this.dropDownButton1.Name = "dropDownButton1";
             this.dropDownButton1.Size = new System.Drawing.Size(220, 55);
             this.dropDownButton1.TabIndex = 33;
@@ -356,19 +366,20 @@
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // btnexcel
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(76)))), ((int)(((byte)(99)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button1.Font = new System.Drawing.Font("Magneto", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(76)))), ((int)(((byte)(99)))));
-            this.button1.ImageKey = "excel_image.png";
-            this.button1.ImageList = this.ımageList1;
-            this.button1.Location = new System.Drawing.Point(32, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 57);
-            this.button1.TabIndex = 30;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(76)))), ((int)(((byte)(99)))));
+            this.btnexcel.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnexcel.Font = new System.Drawing.Font("Magneto", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(76)))), ((int)(((byte)(99)))));
+            this.btnexcel.ImageKey = "excel_image.png";
+            this.btnexcel.ImageList = this.ımageList1;
+            this.btnexcel.Location = new System.Drawing.Point(32, 14);
+            this.btnexcel.Name = "btnexcel";
+            this.btnexcel.Size = new System.Drawing.Size(54, 57);
+            this.btnexcel.TabIndex = 30;
+            this.btnexcel.UseVisualStyleBackColor = false;
+            this.btnexcel.Click += new System.EventHandler(this.btnexcel_Click);
             // 
             // btndelete
             // 
@@ -379,9 +390,9 @@
             this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndelete.ImageKey = "icons8-trash-50.png";
             this.btndelete.ImageList = this.ımageList2;
-            this.btndelete.Location = new System.Drawing.Point(774, 447);
+            this.btndelete.Location = new System.Drawing.Point(774, 445);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(181, 35);
+            this.btndelete.Size = new System.Drawing.Size(181, 37);
             this.btndelete.TabIndex = 15;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
@@ -396,9 +407,9 @@
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.ImageKey = "icons8-available-updates-50.png";
             this.btnupdate.ImageList = this.ımageList2;
-            this.btnupdate.Location = new System.Drawing.Point(496, 447);
+            this.btnupdate.Location = new System.Drawing.Point(496, 445);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(179, 35);
+            this.btnupdate.Size = new System.Drawing.Size(179, 37);
             this.btnupdate.TabIndex = 14;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
@@ -413,9 +424,9 @@
             this.btncreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncreate.ImageKey = "icons8-add-folder-64.png";
             this.btncreate.ImageList = this.ımageList2;
-            this.btncreate.Location = new System.Drawing.Point(220, 447);
+            this.btncreate.Location = new System.Drawing.Point(220, 445);
             this.btncreate.Name = "btncreate";
-            this.btncreate.Size = new System.Drawing.Size(176, 35);
+            this.btncreate.Size = new System.Drawing.Size(176, 37);
             this.btncreate.TabIndex = 13;
             this.btncreate.Text = "CREATE";
             this.btncreate.UseVisualStyleBackColor = false;
@@ -444,7 +455,7 @@
             this.Controls.Add(this.dropDownButton1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.DeviceTrouble);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnexcel);
             this.Controls.Add(this.pickerDate);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -471,6 +482,7 @@
             this.Controls.Add(this.txtTC);
             this.Controls.Add(this.dataGridView1);
             this.Name = "DeviceTroubleRecord";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Device Trouble Record";
             this.Load += new System.EventHandler(this.DeviceTroubleRecord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -508,7 +520,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker pickerDate;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnexcel;
         private System.Windows.Forms.Label DeviceTrouble;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private DevExpress.XtraEditors.DropDownButton dropDownButton1;
