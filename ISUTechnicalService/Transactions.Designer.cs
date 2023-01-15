@@ -42,13 +42,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtIdentity = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtıdentity = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -206,54 +206,60 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtIdentity
             // 
-            this.textBox1.Location = new System.Drawing.Point(228, 248);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 22);
-            this.textBox1.TabIndex = 14;
+            this.txtIdentity.Location = new System.Drawing.Point(228, 248);
+            this.txtIdentity.Name = "txtIdentity";
+            this.txtIdentity.Size = new System.Drawing.Size(163, 22);
+            this.txtIdentity.TabIndex = 14;
+            this.txtIdentity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentity_KeyPress);
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(228, 316);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 22);
-            this.textBox2.TabIndex = 15;
+            this.txtName.Location = new System.Drawing.Point(228, 316);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(163, 22);
+            this.txtName.TabIndex = 15;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
-            // textBox3
+            // txtSurname
             // 
-            this.textBox3.Location = new System.Drawing.Point(228, 382);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 22);
-            this.textBox3.TabIndex = 16;
+            this.txtSurname.Location = new System.Drawing.Point(228, 382);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(157, 22);
+            this.txtSurname.TabIndex = 16;
+            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(228, 449);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 22);
-            this.textBox4.TabIndex = 17;
+            this.txtEmail.Location = new System.Drawing.Point(228, 449);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(163, 22);
+            this.txtEmail.TabIndex = 17;
             // 
-            // textBox6
+            // txtID
             // 
-            this.textBox6.Location = new System.Drawing.Point(831, 272);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 22);
-            this.textBox6.TabIndex = 19;
+            this.txtID.Location = new System.Drawing.Point(831, 272);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(163, 22);
+            this.txtID.TabIndex = 19;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
-            // textBox7
+            // txtıdentity
             // 
-            this.textBox7.Location = new System.Drawing.Point(831, 335);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(163, 22);
-            this.textBox7.TabIndex = 20;
+            this.txtıdentity.Location = new System.Drawing.Point(831, 335);
+            this.txtıdentity.Name = "txtıdentity";
+            this.txtıdentity.Size = new System.Drawing.Size(163, 22);
+            this.txtıdentity.TabIndex = 20;
+            this.txtıdentity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtıdentity_KeyPress);
             // 
-            // textBox8
+            // txtStatus
             // 
-            this.textBox8.Location = new System.Drawing.Point(848, 573);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 22);
-            this.textBox8.TabIndex = 21;
+            this.txtStatus.Enabled = false;
+            this.txtStatus.Location = new System.Drawing.Point(848, 573);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(163, 22);
+            this.txtStatus.TabIndex = 21;
             // 
             // label10
             // 
@@ -283,13 +289,13 @@
             this.ClientSize = new System.Drawing.Size(1202, 754);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.txtıdentity);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtIdentity);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -331,13 +337,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtIdentity;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtıdentity;
+        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }

@@ -146,6 +146,7 @@
             this.txtIdentity.Name = "txtIdentity";
             this.txtIdentity.Size = new System.Drawing.Size(167, 22);
             this.txtIdentity.TabIndex = 18;
+            this.txtIdentity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentity_KeyPress);
             // 
             // txtName
             // 
@@ -153,6 +154,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(167, 22);
             this.txtName.TabIndex = 19;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtEmail
             // 
@@ -167,6 +169,7 @@
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(167, 22);
             this.txtSurname.TabIndex = 21;
+            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
             // txtProcess
             // 
@@ -174,6 +177,7 @@
             this.txtProcess.Name = "txtProcess";
             this.txtProcess.Size = new System.Drawing.Size(167, 22);
             this.txtProcess.TabIndex = 23;
+            this.txtProcess.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcess_KeyPress);
             // 
             // txtPrice
             // 
@@ -181,6 +185,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(167, 22);
             this.txtPrice.TabIndex = 24;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // dateTimePicker1
             // 

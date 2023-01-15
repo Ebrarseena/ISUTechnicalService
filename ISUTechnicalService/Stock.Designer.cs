@@ -69,6 +69,7 @@
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(171, 22);
             this.txtCategory.TabIndex = 17;
+            this.txtCategory.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategory_KeyPress);
             // 
             // txtBrand
             // 
@@ -76,6 +77,7 @@
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(171, 22);
             this.txtBrand.TabIndex = 18;
+            this.txtBrand.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBrand_KeyPress);
             // 
             // txtModel
             // 
@@ -90,6 +92,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(171, 22);
             this.txtPrice.TabIndex = 20;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // txtStock
             // 
@@ -97,6 +100,7 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(171, 22);
             this.txtStock.TabIndex = 21;
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
             // label1
             // 

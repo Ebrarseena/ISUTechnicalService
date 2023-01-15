@@ -151,6 +151,7 @@
             this.txtIdentity.Name = "txtIdentity";
             this.txtIdentity.Size = new System.Drawing.Size(167, 22);
             this.txtIdentity.TabIndex = 8;
+            this.txtIdentity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentity_KeyPress);
             // 
             // txtName
             // 
@@ -158,6 +159,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(167, 22);
             this.txtName.TabIndex = 9;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtSurname
             // 
@@ -165,6 +167,7 @@
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(167, 22);
             this.txtSurname.TabIndex = 10;
+            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
             // txtEmail
             // 
@@ -179,6 +182,7 @@
             this.txtProcess.Name = "txtProcess";
             this.txtProcess.Size = new System.Drawing.Size(167, 22);
             this.txtProcess.TabIndex = 13;
+            this.txtProcess.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcess_KeyPress);
             // 
             // txtPrice
             // 
@@ -186,6 +190,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(167, 22);
             this.txtPrice.TabIndex = 14;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label9
             // 
