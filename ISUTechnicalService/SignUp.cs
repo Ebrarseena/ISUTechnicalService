@@ -15,6 +15,7 @@ namespace ISUTechnicalService
         public SignUp()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void txtIdentity_KeyPress(object sender, KeyPressEventArgs e)
@@ -32,6 +33,16 @@ namespace ISUTechnicalService
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                 && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Registration successfully created!");
         }
     }
 }

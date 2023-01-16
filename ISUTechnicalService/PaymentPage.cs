@@ -15,6 +15,12 @@ namespace ISUTechnicalService
         public PaymentPage()
         {
             InitializeComponent();
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Text = DateTime.Now.ToLongDateString();
         }
 
         private void txtIdentity_KeyPress(object sender, KeyPressEventArgs e)
@@ -43,6 +49,11 @@ namespace ISUTechnicalService
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Payment process completed successfully!");
         }
     }
 }

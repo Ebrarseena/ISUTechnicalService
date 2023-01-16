@@ -16,7 +16,7 @@ namespace ISUTechnicalService
     public partial class DeviceTroubleRecord : Form
     {
 
-        Model1 model = new Model1();
+        Model2 model = new Model2();
         int indexRow;
         int select = 0;
         public DeviceTroubleRecord()
@@ -24,6 +24,7 @@ namespace ISUTechnicalService
             InitializeComponent();
             List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList();
             dataGridView1.DataSource = deviceinfos;
+            timer1.Start();
         }
 
         private void fill()
@@ -92,7 +93,7 @@ namespace ISUTechnicalService
             Deviceİnfo device = model.Deviceİnfo.FirstOrDefault(x => x.ID == select);
             model.Deviceİnfo.Remove(device);
             model.SaveChanges();
-            MessageBox.Show("Deletion completed");
+            MessageBox.Show("Deletion completed!");
             fill();
         }
 

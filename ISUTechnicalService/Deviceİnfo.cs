@@ -8,7 +8,28 @@ namespace ISUTechnicalService
 
     public partial class Deviceİnfo
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
+
+        [Required]
+        [StringLength(11)]
+        public string TC { get; set; }
+
+        [Required]
+        [StringLength(15)]
+        public string Name { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string Surname { get; set; }
+
+        [Required]
+        [StringLength(15)]
+        public string Phone { get; set; }
+
+        [Required]
+        [StringLength(40)]
+        public string Email { get; set; }
 
         [Required]
         [StringLength(15)]
@@ -19,13 +40,13 @@ namespace ISUTechnicalService
         public string Model { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(100)]
         public string Trouble { get; set; }
 
-        public DateTime Date { get; set; }
+        public bool? Status { get; set; }
 
         public double Price { get; set; }
 
-        public bool Status { get; set; }
+        public DateTime Date { get; set; }
     }
 }

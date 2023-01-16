@@ -14,7 +14,7 @@ namespace ISUTechnicalService
 {
     public partial class LOGİN : Form
     {
-        Model1 model = new Model1();
+        Model2 model = new Model2();
         public LOGİN()
         {
             InitializeComponent();
@@ -23,22 +23,12 @@ namespace ISUTechnicalService
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (model.AdminPanel.Any(x => x.UserName == txtUsername.Text && x.Password == txtPassword.Text))
+            if (model.AdminPanel.Any(x => x.Username == txtUsername.Text && x.Password == txtPassword.Text))
             {
                 this.Hide();
                 MessageBox.Show("Login Successful!\n\nWelcome");
                 DeviceTroubleRecord form2 = new DeviceTroubleRecord();
                 form2.Show();
-                txtUsername.Clear();
-                txtPassword.Clear();
-            }
-
-            else if(model.Customerİnfo.Any(x => x.UserName == txtUsername.Text && x.Password == txtPassword.Text))
-            {
-                this.Hide();
-                MessageBox.Show("Login Successful!\n\nWelcome");
-                Form3 form3 = new Form3();
-                form3.Show();
                 txtUsername.Clear();
                 txtPassword.Clear();
             }

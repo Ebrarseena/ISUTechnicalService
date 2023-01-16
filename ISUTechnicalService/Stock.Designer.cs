@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtCategory = new System.Windows.Forms.TextBox();
@@ -47,58 +48,75 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 433);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 352);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1142, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(856, 238);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(291, 141);
+            this.txtCategory.Location = new System.Drawing.Point(218, 115);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(171, 22);
+            this.txtCategory.Size = new System.Drawing.Size(129, 20);
             this.txtCategory.TabIndex = 17;
             this.txtCategory.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategory_KeyPress);
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(291, 195);
+            this.txtBrand.Location = new System.Drawing.Point(218, 158);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
             this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(171, 22);
+            this.txtBrand.Size = new System.Drawing.Size(129, 20);
             this.txtBrand.TabIndex = 18;
             this.txtBrand.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBrand_KeyPress);
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(291, 262);
+            this.txtModel.Location = new System.Drawing.Point(218, 213);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(2);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(171, 22);
+            this.txtModel.Size = new System.Drawing.Size(129, 20);
             this.txtModel.TabIndex = 19;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(840, 163);
+            this.txtPrice.Location = new System.Drawing.Point(630, 132);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(171, 22);
+            this.txtPrice.Size = new System.Drawing.Size(129, 20);
             this.txtPrice.TabIndex = 20;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(840, 237);
+            this.txtStock.Location = new System.Drawing.Point(630, 193);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(171, 22);
+            this.txtStock.Size = new System.Drawing.Size(129, 20);
             this.txtStock.TabIndex = 21;
             this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
@@ -107,9 +125,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(153, 141);
+            this.label1.Location = new System.Drawing.Point(115, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 23);
+            this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 22;
             this.label1.Text = "Category:";
             // 
@@ -118,9 +137,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label2.Location = new System.Drawing.Point(168, 195);
+            this.label2.Location = new System.Drawing.Point(126, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 23);
+            this.label2.Size = new System.Drawing.Size(64, 19);
             this.label2.TabIndex = 23;
             this.label2.Text = "Brand:";
             // 
@@ -129,9 +149,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label3.Location = new System.Drawing.Point(169, 262);
+            this.label3.Location = new System.Drawing.Point(127, 213);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 23);
+            this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 24;
             this.label3.Text = "Model:";
             // 
@@ -140,9 +161,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label4.Location = new System.Drawing.Point(730, 161);
+            this.label4.Location = new System.Drawing.Point(548, 131);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 23);
+            this.label4.Size = new System.Drawing.Size(56, 19);
             this.label4.TabIndex = 25;
             this.label4.Text = "Price:";
             // 
@@ -151,9 +173,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label5.Location = new System.Drawing.Point(730, 235);
+            this.label5.Location = new System.Drawing.Point(548, 191);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 23);
+            this.label5.Size = new System.Drawing.Size(61, 19);
             this.label5.TabIndex = 26;
             this.label5.Text = "Stock:";
             // 
@@ -162,9 +185,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label6.Location = new System.Drawing.Point(451, 44);
+            this.label6.Location = new System.Drawing.Point(338, 36);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(289, 32);
+            this.label6.Size = new System.Drawing.Size(226, 25);
             this.label6.TabIndex = 27;
             this.label6.Text = "STOCK TRACKING";
             // 
@@ -180,8 +204,9 @@
             // 
             this.pictureBox1.Image = global::ISUTechnicalService.Properties.Resources.images;
             this.pictureBox1.Location = new System.Drawing.Point(1, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(112, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
@@ -195,9 +220,10 @@
             this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndelete.ImageKey = "icons8-trash-50.png";
             this.btndelete.ImageList = this.ımageList1;
-            this.btndelete.Location = new System.Drawing.Point(758, 360);
+            this.btndelete.Location = new System.Drawing.Point(568, 292);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(2);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(188, 37);
+            this.btndelete.Size = new System.Drawing.Size(141, 30);
             this.btndelete.TabIndex = 16;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
@@ -212,9 +238,10 @@
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.ImageKey = "icons8-available-updates-50.png";
             this.btnupdate.ImageList = this.ımageList1;
-            this.btnupdate.Location = new System.Drawing.Point(497, 360);
+            this.btnupdate.Location = new System.Drawing.Point(373, 292);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(188, 37);
+            this.btnupdate.Size = new System.Drawing.Size(141, 30);
             this.btnupdate.TabIndex = 15;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
@@ -229,20 +256,43 @@
             this.btncreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncreate.ImageKey = "icons8-add-folder-64.png";
             this.btncreate.ImageList = this.ımageList1;
-            this.btncreate.Location = new System.Drawing.Point(236, 360);
+            this.btncreate.Location = new System.Drawing.Point(177, 292);
+            this.btncreate.Margin = new System.Windows.Forms.Padding(2);
             this.btncreate.Name = "btncreate";
-            this.btncreate.Size = new System.Drawing.Size(188, 37);
+            this.btncreate.Size = new System.Drawing.Size(141, 30);
             this.btncreate.TabIndex = 14;
             this.btncreate.Text = "CREATE";
             this.btncreate.UseVisualStyleBackColor = false;
             this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.ImageKey = "images.png";
+            this.btnExcel.ImageList = this.ımageList2;
+            this.btnExcel.Location = new System.Drawing.Point(815, 26);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(64, 62);
+            this.btnExcel.TabIndex = 29;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // ımageList2
+            // 
+            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
+            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList2.Images.SetKeyName(0, "images.png");
+            // 
             // Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1203, 752);
+            this.ClientSize = new System.Drawing.Size(902, 611);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -259,6 +309,7 @@
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btncreate);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Stock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock";
@@ -288,5 +339,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.ImageList ımageList2;
     }
 }

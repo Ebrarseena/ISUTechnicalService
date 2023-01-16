@@ -5,17 +5,16 @@ using System.Linq;
 
 namespace ISUTechnicalService
 {
-    public partial class Model1 : DbContext
+    public partial class Model2 : DbContext
     {
-        public Model1()
-            : base("name=Model1")
+        public Model2()
+            : base("name=Model2")
         {
         }
 
         public virtual DbSet<AdminPanel> AdminPanel { get; set; }
         public virtual DbSet<Customerİnfo> Customerİnfo { get; set; }
         public virtual DbSet<Deviceİnfo> Deviceİnfo { get; set; }
-
         public virtual DbSet<Payment> Payment { get; set; }
         public virtual DbSet<SalesHistory> SalesHistory { get; set; }
         public virtual DbSet<StockTracking> StockTracking { get; set; }
@@ -51,6 +50,26 @@ namespace ISUTechnicalService
                 .IsUnicode(false);
 
             modelBuilder.Entity<Deviceİnfo>()
+                .Property(e => e.TC)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Deviceİnfo>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Deviceİnfo>()
+                .Property(e => e.Surname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Deviceİnfo>()
+                .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Deviceİnfo>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Deviceİnfo>()
                 .Property(e => e.Brand)
                 .IsUnicode(false);
 
@@ -75,11 +94,11 @@ namespace ISUTechnicalService
                 .IsUnicode(false);
 
             modelBuilder.Entity<Payment>()
-                .Property(e => e.Email)
+                .Property(e => e.Phone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Payment>()
-                .Property(e => e.Phone)
+                .Property(e => e.Email)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Payment>()
@@ -99,11 +118,11 @@ namespace ISUTechnicalService
                 .IsUnicode(false);
 
             modelBuilder.Entity<SalesHistory>()
-                .Property(e => e.Email)
+                .Property(e => e.Phone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<SalesHistory>()
-                .Property(e => e.Phone)
+                .Property(e => e.Email)
                 .IsUnicode(false);
 
             modelBuilder.Entity<SalesHistory>()

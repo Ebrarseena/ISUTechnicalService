@@ -13,7 +13,7 @@ namespace ISUTechnicalService
 {
     public partial class Stock : Form
     {
-        Model1 model = new Model1();
+        Model2 model = new Model2();
         int indexRow;
         int select = 0;
         public Stock()
@@ -21,6 +21,7 @@ namespace ISUTechnicalService
             InitializeComponent();
             List<StockTracking> stock = model.StockTracking.ToList();
             dataGridView1.DataSource = stock;
+            timer1.Start();
         }
 
         private void fill()
@@ -116,6 +117,16 @@ namespace ISUTechnicalService
         private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

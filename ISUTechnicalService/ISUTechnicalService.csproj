@@ -100,6 +100,7 @@
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.cs" />
+    <Compile Include="Model2.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="PaymentPage.cs">
       <SubType>Form</SubType>
@@ -140,6 +141,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>

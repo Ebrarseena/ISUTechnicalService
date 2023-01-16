@@ -12,7 +12,7 @@ namespace ISUTechnicalService
 {
     public partial class Saleshstry : Form
     {
-        Model1 model = new Model1();
+        Model2 model = new Model2();
         int indexRow;
         int select = 0;
         public Saleshstry()
@@ -20,6 +20,7 @@ namespace ISUTechnicalService
             InitializeComponent();
             List<SalesHistory> sale = model.SalesHistory.ToList();
             dataGridView1.DataSource = sale;
+            timer1.Start();
         }
 
         private void fill()
@@ -69,6 +70,7 @@ namespace ISUTechnicalService
             newDataRow.Cells[6].Value = txtProcess.Text;
             newDataRow.Cells[7].Value = txtPrice.Text;
             newDataRow.Cells[8].Value = dateTimePicker1.Checked;
+            MessageBox.Show("Successfully updated!");
             txtIdentity.Clear();
             txtName.Clear();
             txtSurname.Clear();
@@ -85,6 +87,7 @@ namespace ISUTechnicalService
             SalesHistory product = model.SalesHistory.FirstOrDefault(x => x.ID == select);
             model.SalesHistory.Remove(product);
             model.SaveChanges();
+            MessageBox.Show("Deletion completed");
             fill();
         }
 
@@ -135,6 +138,16 @@ namespace ISUTechnicalService
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

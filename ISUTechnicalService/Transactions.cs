@@ -15,6 +15,7 @@ namespace ISUTechnicalService
         public Transactions()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void Transactions_Load(object sender, EventArgs e)
@@ -47,6 +48,16 @@ namespace ISUTechnicalService
         private void txtıdentity_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Registration successfully created!");
         }
     }
 }

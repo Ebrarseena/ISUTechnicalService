@@ -24,12 +24,12 @@ namespace ISUTechnicalService
         public string Surname { get; set; }
 
         [Required]
-        [StringLength(40)]
-        public string Email { get; set; }
-
-        [Required]
         [StringLength(15)]
         public string Phone { get; set; }
+
+        [Required]
+        [StringLength(40)]
+        public string Email { get; set; }
 
         [Required]
         [StringLength(50)]
