@@ -37,7 +37,7 @@ namespace ISUTechnicalService
             stock.Brand = txtBrand.Text;
             stock.Model = txtModel.Text;
             stock.Price = Convert.ToDouble(txtPrice.Text);
-            stock.Stock = Convert.ToInt32(txtPrice.Text); //SOR
+            stock.Stock = Convert.ToInt32(txtStock.Text); //SOR
             model.StockTracking.Add(stock);
             model.SaveChanges();
 

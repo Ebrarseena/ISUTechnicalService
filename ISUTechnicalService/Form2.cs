@@ -17,13 +17,13 @@ namespace ISUTechnicalService
     public partial class DeviceTroubleRecord : Form
     {
 
-        Model2 model = new Model2();
+        Model2 model = new Model2(); // SOR
         int indexRow;
         int select = 0;
         public DeviceTroubleRecord()
         {
             InitializeComponent();
-            List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList();
+            List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList(); //Birden fazla device kaydı çekileceği için List oluşturulur
             dataGridView1.DataSource = deviceinfos;
             timer1.Start();
         }
@@ -44,13 +44,13 @@ namespace ISUTechnicalService
             Text = DateTime.Now.ToLongDateString();
         }
 
-        private void btncreate_Click(object sender, EventArgs e)
+        private void btncreate_Click(object sender, EventArgs e)  
         {
             try
             {
                 Model2 models = new Model2();
-                Deviceİnfo deviceinfo = new Deviceİnfo();
-                deviceinfo.Brand = txtBrand.Text;
+                Deviceİnfo deviceinfo = new Deviceİnfo();  // Nesne oluşturulur
+                deviceinfo.Brand = txtBrand.Text;          // Databasede bulunan brand ile formdaki txtBrand verisinin eşit olduğunu bildirir.
                 deviceinfo.Model = txtModel.Text;
                 deviceinfo.Trouble = txtTrouble.Text;
                 deviceinfo.Status = radioButton1.Checked;
@@ -66,12 +66,12 @@ namespace ISUTechnicalService
 
                 List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList();
                 dataGridView1.DataSource = deviceinfo;
-                MessageBox.Show("Adding process took place!");
-                txtBrand.Clear();
+                MessageBox.Show("Adding process took place!");  //Verilecek mesaj
+                txtBrand.Clear();       //Textboxlar temizlenir
                 txtModel.Clear();
                 txtTrouble.Clear();
                 txtPrice.Clear();
-                radioButton1.ResetText();   //Resettext
+                radioButton1.ResetText();   
                 pickerDate.ResetText();
                 fill();
             }
@@ -132,7 +132,7 @@ namespace ISUTechnicalService
             select = Convert.ToInt32(value);
         }
 
-        private void btnexcel_Click(object sender, EventArgs e)
+        private void btnexcel_Click(object sender, EventArgs e)  
         {
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application(); // Excel uygulaması oluşturur
             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing); // Yeni workbook oluşturur
@@ -155,12 +155,12 @@ namespace ISUTechnicalService
             app.Quit();
         }
 
-        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)  
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);   // Textboxa sadece sayı girilebilir
         }
 
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)       // Textboxa sadece harf girilebilir
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                 && !char.IsSeparator(e.KeyChar);
@@ -193,8 +193,8 @@ namespace ISUTechnicalService
         {
             Model2 model = new Model2();
             string gelenTc = txtTC.Text;
-            Customerİnfo customer = model.Customerİnfo.Where(x => x.TC == gelenTc).FirstOrDefault();
-            if (customer != null)
+            Customerİnfo customer = model.Customerİnfo.Where(x => x.TC == gelenTc).FirstOrDefault(); //LİNQ SORGUSU KULLANILDI (Temel sorgularından birisi olan where sorgusu ile)
+            if (customer != null)                                                                   //Bir tane veri çekileceği için FirstOrDefault kullanıldı aksi taktirde list kullanılacaktı
             {
                 txtName.Text = customer.Name;
                 txtSurname.Text = customer.Surname;

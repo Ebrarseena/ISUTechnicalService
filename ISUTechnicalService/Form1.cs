@@ -24,7 +24,7 @@ namespace ISUTechnicalService
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (model.AdminPanel.Any(x => x.Username == txtUsername.Text && x.Password == txtPassword.Text))
+            if (model.AdminPanel.Any(x => x.Username == txtUsername.Text && x.Password == txtPassword.Text)) // Databasede bulunan AdminPanel tablosundaki verilerle textboxtaki veriler uyuştuğu taktirde if koşuluna girer
             {
                 string name = txtUsername.Text;
                 this.Hide();
@@ -35,7 +35,7 @@ namespace ISUTechnicalService
                 txtPassword.Clear();
             }
 
-            else if (model.Customerİnfo.Any(x => x.TC == txtUsername.Text && x.Surname == txtPassword.Text))
+            else if (model.Customerİnfo.Any(x => x.TC == txtUsername.Text && x.Surname == txtPassword.Text)) // Databasede bulunan Customerİnfo tablosundaki verilerle textboxtaki veriler uyuştuğu taktirde bu koşula girer
             {
                 string name = txtUsername.Text;
                 this.Hide();
@@ -47,12 +47,12 @@ namespace ISUTechnicalService
             }
 
 
-            else if (txtUsername.Text == "" || txtPassword.Text == "")
+            else if (txtUsername.Text == "" || txtPassword.Text == "")  // Textboxlardan bir tanesi boş kaldığı taktirde gireceği koşul
             {
                 MessageBox.Show("Please fill all fields.");
             }
 
-            else
+            else   //Verilerden herhangi birisi yanlış girildiği taktirde gireceği koşul
             {
                 MessageBox.Show("The user name or password entered is incorrect \n\t\tPlease try again.");
                 txtUsername.Clear();
@@ -62,7 +62,7 @@ namespace ISUTechnicalService
 
         private void chcboxpassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (chcboxpassword.Checked)
+            if (chcboxpassword.Checked)  //Checkbox işaretli ise açık şekilde işaretli değil ise password değerinin * şeklinde gözükmesini sağlar
             {
 
                 txtPassword.PasswordChar = '\0';
@@ -76,7 +76,7 @@ namespace ISUTechnicalService
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter) //Enter ile giriş yapılmasını sağlar
             {
                 e.Handled = true;
                 btnLogin.PerformClick();
@@ -97,18 +97,18 @@ namespace ISUTechnicalService
         }
         private void LOGİN_Load(object sender, EventArgs e)
         {
-            timer1.Start();
+            timer1.Start(); //Eklenen timer aracına start verir
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Text = DateTime.Now.ToLongDateString();
+            Text = DateTime.Now.ToLongDateString(); // Timer aracının tarih göstereceğini belirtir
         }
 
-        private void btnAppointment_Click(object sender, EventArgs e)
+        private void btnAppointment_Click(object sender, EventArgs e)  
         {
-            SignUp up = new SignUp();
-            up.Show();
+            SignUp up = new SignUp();           //Yönlendirilecek sayfayı belirtir
+            up.Show(); 
         }
     }
 }

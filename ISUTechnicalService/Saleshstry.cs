@@ -12,7 +12,7 @@ namespace ISUTechnicalService
 {
     public partial class Saleshstry : Form
     {
-        Model2 model = new Model2();
+        Model2 model = new Model2(); 
         int indexRow;
         int select = 0;
         public Saleshstry()
@@ -44,7 +44,7 @@ namespace ISUTechnicalService
             model.SalesHistory.Add(sale);
             model.SaveChanges();
 
-            List<SalesHistory> sales = model.SalesHistory.ToList();
+            List<SalesHistory> sales = model.SalesHistory.ToList();  //List oluşturuldu
             dataGridView1.DataSource = sale;
             MessageBox.Show("Adding process took place!");
             txtIdentity.Clear();
@@ -91,7 +91,7 @@ namespace ISUTechnicalService
             fill();
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e) //Çift tıklamada griddeki verileri textboxa taşır
         {
             indexRow = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[indexRow];

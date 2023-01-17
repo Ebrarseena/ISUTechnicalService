@@ -81,7 +81,7 @@ namespace ISUTechnicalService
 
         private void btnTransfer_Click(object sender, EventArgs e)
         {
-            Model2 model = new Model2();
+            Model2 model = new Model2();   //SORRRRRR
             string gelenTc = txtIdentity.Text;
             Customerİnfo customer = model.Customerİnfo.Where(x => x.TC == gelenTc).FirstOrDefault();
             Deviceİnfo trouble = new Deviceİnfo();
