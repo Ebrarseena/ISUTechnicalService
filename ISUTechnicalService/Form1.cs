@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.Office.Interop.Excel;
 
 namespace ISUTechnicalService
 {
@@ -25,13 +26,26 @@ namespace ISUTechnicalService
         {
             if (model.AdminPanel.Any(x => x.Username == txtUsername.Text && x.Password == txtPassword.Text))
             {
+                string name = txtUsername.Text;
                 this.Hide();
-                MessageBox.Show("Login Successful!\n\nWelcome");
+                MessageBox.Show("Login Successful\n\nWelcome " +  name + "!");
                 DeviceTroubleRecord form2 = new DeviceTroubleRecord();
                 form2.Show();
                 txtUsername.Clear();
                 txtPassword.Clear();
             }
+
+            else if (model.Customerİnfo.Any(x => x.TC == txtUsername.Text && x.Surname == txtPassword.Text))
+            {
+                string name = txtUsername.Text;
+                this.Hide();
+                MessageBox.Show("Login Successful\n\nWelcome " + name + "!");
+                Transactions actions = new Transactions();
+                actions.Show();
+                txtUsername.Clear();
+                txtPassword.Clear();
+            }
+
 
             else if (txtUsername.Text == "" || txtPassword.Text == "")
             {
@@ -91,15 +105,10 @@ namespace ISUTechnicalService
             Text = DateTime.Now.ToLongDateString();
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void btnAppointment_Click(object sender, EventArgs e)
         {
             SignUp up = new SignUp();
             up.Show();
-        }
-
-        private void LOGİN_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

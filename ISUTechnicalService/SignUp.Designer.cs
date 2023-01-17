@@ -163,7 +163,7 @@
             this.btnComplete.Margin = new System.Windows.Forms.Padding(2);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(208, 44);
-            this.btnComplete.TabIndex = 15;
+            this.btnComplete.TabIndex = 18;
             this.btnComplete.Text = "COMPLETE\r\n\r\n";
             this.btnComplete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnComplete.UseVisualStyleBackColor = false;

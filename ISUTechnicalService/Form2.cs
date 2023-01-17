@@ -1,4 +1,5 @@
-﻿using DevExpress.Utils.About;
+﻿using DevExpress.Data.ODataLinq.Helpers;
+using DevExpress.Utils.About;
 using DevExpress.XtraEditors.Repository;
 using System;
 using System.Collections.Generic;
@@ -45,27 +46,43 @@ namespace ISUTechnicalService
 
         private void btncreate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Model2 models = new Model2();
+                Deviceİnfo deviceinfo = new Deviceİnfo();
+                deviceinfo.Brand = txtBrand.Text;
+                deviceinfo.Model = txtModel.Text;
+                deviceinfo.Trouble = txtTrouble.Text;
+                deviceinfo.Status = radioButton1.Checked;
+                deviceinfo.Price = Convert.ToDouble(txtPrice.Text);
+                deviceinfo.Date = DateTime.Now;
+                deviceinfo.Name = txtName.Text;
+                deviceinfo.Surname = txtSurname.Text;
+                deviceinfo.Phone = maskedTextBox1.Text;
+                deviceinfo.TC = txtTC.Text;
+                deviceinfo.Email = txtMail.Text;
+                models.Deviceİnfo.Add(deviceinfo);
+                models.SaveChanges();
 
-            Deviceİnfo deviceinfo = new Deviceİnfo();
-            deviceinfo.Brand = txtBrand.Text;
-            deviceinfo.Model = txtModel.Text;
-            deviceinfo.Trouble = txtTrouble.Text;
-            deviceinfo.Status = radioButton1.Checked;
-            deviceinfo.Price = Convert.ToDouble(txtPrice.Text);
-            deviceinfo.Date = pickerDate.MinDate;
-            model.Deviceİnfo.Add(deviceinfo);
-            model.SaveChanges();
+                List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList();
+                dataGridView1.DataSource = deviceinfo;
+                MessageBox.Show("Adding process took place!");
+                txtBrand.Clear();
+                txtModel.Clear();
+                txtTrouble.Clear();
+                txtPrice.Clear();
+                radioButton1.ResetText();   //Resettext
+                pickerDate.ResetText();
+                fill();
+            }
+             catch (Exception exs)
+            {
+                string hata = exs.Message;
+            }
 
-            List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList();
-            dataGridView1.DataSource = deviceinfo;
-            MessageBox.Show("Adding process took place!");
-            txtBrand.Clear();
-            txtModel.Clear();
-            txtTrouble.Clear();
-            txtPrice.Clear();
-            radioButton1.ResetText();   //Resettext
-            pickerDate.ResetText();
-            fill();
+            
+
+    
         }
 
         private void btnupdate_Click(object sender, EventArgs e)
@@ -117,7 +134,25 @@ namespace ISUTechnicalService
 
         private void btnexcel_Click(object sender, EventArgs e)
         {
-
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application(); // Excel uygulaması oluşturur
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing); // Yeni workbook oluşturur
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null; // Oluşturulan woorkbook da excel sayfası oluşturur
+            app.Visible = true;
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "Exported from gridview"; // Çalışma sayfasının isimlendirilmesi
+            // Başlık kısmını Excel'de depola
+            for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < dataGridView1.Rows.Count; i++) // Her satır ve sütun değerini excel sayfasına kaydeder
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            app.Quit();
         }
 
         private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
@@ -152,6 +187,20 @@ namespace ISUTechnicalService
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void btntransfer_Click(object sender, EventArgs e)
+        {
+            Model2 model = new Model2();
+            string gelenTc = txtTC.Text;
+            Customerİnfo customer = model.Customerİnfo.Where(x => x.TC == gelenTc).FirstOrDefault();
+            if (customer != null)
+            {
+                txtName.Text = customer.Name;
+                txtSurname.Text = customer.Surname;
+                txtMail.Text = customer.Email;
+                maskedTextBox1.Text = customer.Phone;
+            }
         }
     }
     }

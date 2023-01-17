@@ -55,9 +55,50 @@ namespace ISUTechnicalService
             Text = DateTime.Now.ToLongDateString();
         }
 
-        private void btnComplete_Click(object sender, EventArgs e)
+        private void btnPayment_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Registration successfully created!");
+            Model2 model = new Model2();
+            Customerİnfo customer = new Customerİnfo();
+
+            customer.TC = txtIdentity.Text;
+            customer.Name = txtName.Text;
+            customer.Surname = txtSurname.Text;
+            customer.Email = txtEmail.Text;
+            customer.Phone = maskedTextBox1.Text;
+            model.Customerİnfo.Add(customer);
+            model.SaveChanges();
+            MessageBox.Show("Payment process completed successfully!");
+            txtIdentity.Clear();
+            txtName.Clear();
+            txtSurname.Clear();
+            txtEmail.Clear();
+            maskedTextBox1.Clear();
+            txtProcess.Clear();
+            txtPrice.Clear();
+            datePicker.ResetText();
+
+        }
+
+        private void btnTransfer_Click(object sender, EventArgs e)
+        {
+            Model2 model = new Model2();
+            string gelenTc = txtIdentity.Text;
+            Customerİnfo customer = model.Customerİnfo.Where(x => x.TC == gelenTc).FirstOrDefault();
+            Deviceİnfo trouble = new Deviceİnfo();
+            if (customer != null)
+            {
+                txtName.Text = customer.Name;
+                txtSurname.Text = customer.Surname;
+                txtEmail.Text = customer.Email;
+                maskedTextBox1.Text = customer.Phone;
+                txtProcess.Text = trouble.Trouble;
+                
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

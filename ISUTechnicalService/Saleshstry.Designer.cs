@@ -231,6 +231,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 352);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -322,7 +323,7 @@
             this.maskedTextBox1.Mask = "(999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(126, 20);
-            this.maskedTextBox1.TabIndex = 23;
+            this.maskedTextBox1.TabIndex = 12;
             this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timer1
@@ -331,7 +332,7 @@
             // 
             // btnExcel
             // 
-            this.btnExcel.ImageKey = "images.png";
+            this.btnExcel.ImageKey = "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg";
             this.btnExcel.ImageList = this.ımageList2;
             this.btnExcel.Location = new System.Drawing.Point(828, 21);
             this.btnExcel.Name = "btnExcel";
@@ -344,7 +345,7 @@
             // 
             this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
             this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList2.Images.SetKeyName(0, "images.png");
+            this.ımageList2.Images.SetKeyName(0, "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg");
             // 
             // Saleshstry
             // 

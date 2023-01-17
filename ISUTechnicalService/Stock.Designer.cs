@@ -57,6 +57,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill; //Gridin içindeki verilerin gridi tamamen kaplaması için
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -271,7 +272,7 @@
             // 
             // btnExcel
             // 
-            this.btnExcel.ImageKey = "images.png";
+            this.btnExcel.ImageKey = "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg";
             this.btnExcel.ImageList = this.ımageList2;
             this.btnExcel.Location = new System.Drawing.Point(815, 26);
             this.btnExcel.Name = "btnExcel";
@@ -284,7 +285,7 @@
             // 
             this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
             this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList2.Images.SetKeyName(0, "images.png");
+            this.ımageList2.Images.SetKeyName(0, "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg");
             // 
             // Stock
             // 

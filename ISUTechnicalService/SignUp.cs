@@ -42,7 +42,21 @@ namespace ISUTechnicalService
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
+            Model2 model = new Model2();
+            Customerİnfo customer = new Customerİnfo();
+
+            customer.TC = txtIdentity.Text;
+            customer.Name = txtName.Text;
+            customer.Surname = txtSurname.Text;
+            customer.Email = txtEmail.Text;
+            customer.Phone = maskedTextBox1.Text;
+            model.Customerİnfo.Add(customer);
+            model.SaveChanges();
             MessageBox.Show("Registration successfully created!");
+            this.Hide();
+            LOGİN login = new LOGİN();
+            login.Show();
+
         }
     }
 }

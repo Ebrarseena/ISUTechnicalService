@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceTroubleRecord));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTC = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
@@ -67,31 +66,12 @@
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btntransfer = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 406);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(876, 201);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // txtTC
             // 
@@ -134,7 +114,7 @@
             this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(106, 20);
-            this.txtBrand.TabIndex = 6;
+            this.txtBrand.TabIndex = 7;
             // 
             // txtModel
             // 
@@ -142,7 +122,7 @@
             this.txtModel.Margin = new System.Windows.Forms.Padding(2);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(106, 20);
-            this.txtModel.TabIndex = 7;
+            this.txtModel.TabIndex = 6;
             this.txtModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtModel_KeyPress);
             // 
             // txtTrouble
@@ -321,14 +301,14 @@
             this.pickerDate.Margin = new System.Windows.Forms.Padding(2);
             this.pickerDate.Name = "pickerDate";
             this.pickerDate.Size = new System.Drawing.Size(151, 20);
-            this.pickerDate.TabIndex = 29;
+            this.pickerDate.TabIndex = 11;
             // 
             // ımageList1
             // 
             this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "excel_image.png");
-            this.ımageList1.Images.SetKeyName(1, "images.png");
+            this.ımageList1.Images.SetKeyName(0, "1200x600wa.png");
+            this.ımageList1.Images.SetKeyName(1, "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg");
             // 
             // DeviceTrouble
             // 
@@ -351,7 +331,7 @@
             this.maskedTextBox1.Mask = "(999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(106, 20);
-            this.maskedTextBox1.TabIndex = 32;
+            this.maskedTextBox1.TabIndex = 5;
             this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timer1
@@ -406,12 +386,12 @@
             this.btnexcel.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnexcel.Font = new System.Drawing.Font("Magneto", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnexcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(76)))), ((int)(((byte)(99)))));
-            this.btnexcel.ImageKey = "images.png";
+            this.btnexcel.ImageIndex = 1;
             this.btnexcel.ImageList = this.ımageList1;
-            this.btnexcel.Location = new System.Drawing.Point(835, 24);
+            this.btnexcel.Location = new System.Drawing.Point(15, 11);
             this.btnexcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnexcel.Name = "btnexcel";
-            this.btnexcel.Size = new System.Drawing.Size(56, 55);
+            this.btnexcel.Size = new System.Drawing.Size(57, 55);
             this.btnexcel.TabIndex = 30;
             this.btnexcel.UseVisualStyleBackColor = false;
             this.btnexcel.Click += new System.EventHandler(this.btnexcel_Click);
@@ -425,7 +405,7 @@
             this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndelete.ImageKey = "icons8-trash-50.png";
             this.btndelete.ImageList = this.ımageList2;
-            this.btndelete.Location = new System.Drawing.Point(580, 362);
+            this.btndelete.Location = new System.Drawing.Point(580, 348);
             this.btndelete.Margin = new System.Windows.Forms.Padding(2);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(136, 30);
@@ -443,7 +423,7 @@
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.ImageKey = "icons8-available-updates-50.png";
             this.btnupdate.ImageList = this.ımageList2;
-            this.btnupdate.Location = new System.Drawing.Point(372, 362);
+            this.btnupdate.Location = new System.Drawing.Point(376, 348);
             this.btnupdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(134, 30);
@@ -461,7 +441,7 @@
             this.btncreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncreate.ImageKey = "icons8-add-folder-64.png";
             this.btncreate.ImageList = this.ımageList2;
-            this.btncreate.Location = new System.Drawing.Point(165, 362);
+            this.btncreate.Location = new System.Drawing.Point(166, 348);
             this.btncreate.Margin = new System.Windows.Forms.Padding(2);
             this.btncreate.Name = "btncreate";
             this.btncreate.Size = new System.Drawing.Size(132, 30);
@@ -477,9 +457,43 @@
             this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(69, 17);
-            this.radioButton1.TabIndex = 36;
+            this.radioButton1.TabIndex = 9;
             this.radioButton1.Text = "Complete";
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // btntransfer
+            // 
+            this.btntransfer.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntransfer.ImageKey = "1200x600wa.png";
+            this.btntransfer.ImageList = this.ımageList1;
+            this.btntransfer.Location = new System.Drawing.Point(268, 201);
+            this.btntransfer.Name = "btntransfer";
+            this.btntransfer.Size = new System.Drawing.Size(30, 37);
+            this.btntransfer.TabIndex = 37;
+            this.btntransfer.UseVisualStyleBackColor = true;
+            this.btntransfer.Click += new System.EventHandler(this.btntransfer_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 395);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(876, 201);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // DeviceTroubleRecord
             // 
@@ -487,6 +501,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(906, 622);
+            this.Controls.Add(this.btntransfer);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
@@ -525,17 +540,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Device Trouble Record";
             this.Load += new System.EventHandler(this.DeviceTroubleRecord_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtTC;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
@@ -571,5 +584,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button btntransfer;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
