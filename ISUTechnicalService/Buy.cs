@@ -32,8 +32,6 @@ namespace ISUTechnicalService
             ComboDoldur1();
             ComboDoldur2();
             ComboDoldur3();
-
-            //cmboxCategory.DataBindings();b
         }
 
         public void ComboDoldur1()
@@ -85,15 +83,16 @@ namespace ISUTechnicalService
             {
                 stocks.Stock = stocks.Stock-int.Parse(txtQuantity.Text);
             }
+            MessageBox.Show("The sale was successful!");
             models.SaveChanges();
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
         {
-                this.Hide();
-            Stock form22 = new Stock();
-            form22.Show();
+            this.Hide();
+            Stock stocks = new Stock();
+            stocks.Show();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace ISUTechnicalService
 {
     public partial class Transactions : Form
     {
+        Model2 model = new Model2();
         public Transactions()
         {
             InitializeComponent();
@@ -51,11 +52,11 @@ namespace ISUTechnicalService
             Text = DateTime.Now.ToLongDateString();
         }
 
-        //private void fill()
-        //{
-        //    List<Deviceİnfo> deviceinfos = model.Deviceİnfo.ToList();
-        //    dataGridView1.DataSource = deviceinfos;
-        //}
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
@@ -68,8 +69,7 @@ namespace ISUTechnicalService
                 info.Payment = true;
             }
             model.SaveChanges();
-            
-
+           
             MessageBox.Show("Payment process completed successfully!");
             txtIdentity.Clear();
             txtName.Clear();
@@ -79,12 +79,11 @@ namespace ISUTechnicalService
             txtProcess.Clear();
             txtPrice.Clear();
             datePicker.ResetText();
-
         }
 
         private void btnTransfer_Click(object sender, EventArgs e)
         {
-            Model2 model = new Model2();   //SORRRRRR
+            Model2 model = new Model2();   
             string gelenTc = txtIdentity.Text;
             Customerİnfo customer = model.Customerİnfo.Where(x => x.TC == gelenTc).FirstOrDefault();
             Deviceİnfo trouble = new Deviceİnfo();
@@ -92,11 +91,10 @@ namespace ISUTechnicalService
             {
                 txtName.Text = customer.Name;
                 txtSurname.Text = customer.Surname;
-                txtEmail.Text = customer.Email;
+                txtEmail.Text = Base64Decode(customer.Email);
                 maskedTextBox1.Text = customer.Phone;
-                txtPrice.Text = trouble.Price.ToString();
+                // txtPrice.Text = trouble.Price.ToString();
                 txtProcess.Text = trouble.Trouble;
-
             }
         }
 
@@ -122,6 +120,11 @@ namespace ISUTechnicalService
             }
         }
 
-
+        private void btnRecordPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DeviceTroubleRecord DeviceRecord = new DeviceTroubleRecord();
+            DeviceRecord.Show();
+        }
     }
 }

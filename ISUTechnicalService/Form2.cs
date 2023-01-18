@@ -55,11 +55,12 @@ namespace ISUTechnicalService
             try
             {
                 Model2 models = new Model2();
-                Deviceİnfo deviceinfo = new Deviceİnfo();  // Nesne oluşturulur
+                Deviceİnfo deviceinfo = new Deviceİnfo();                 // Nesne oluşturulur.
+                deviceinfo.TC = txtTC.Text;
                 deviceinfo.Brand = txtBrand.Text;          // Databasede bulunan brand ile formdaki txtBrand verisinin eşit olduğunu bildirir.
                 deviceinfo.Model = txtModel.Text;
                 deviceinfo.Trouble = txtTrouble.Text;
-                deviceinfo.Price = Convert.ToSingle(txtPrice.Text);
+                //deviceinfo.Price = Convert.ToSingle(txtPrice.Text);
                 deviceinfo.Status = rdioComplete.Checked;
                 deviceinfo.Payment = rdioPayment.Checked;
                 deviceinfo.Date = DateTime.Now;
@@ -67,7 +68,6 @@ namespace ISUTechnicalService
                 deviceinfo.Name = txtName.Text;
                 deviceinfo.Surname = txtSurname.Text;
                 deviceinfo.Phone = maskedTextBox1.Text;
-                deviceinfo.TC = txtTC.Text;
                 deviceinfo.Email = Base64Decode(txtMail.Text);
                 models.Deviceİnfo.Add(deviceinfo);
                 models.SaveChanges();
@@ -93,14 +93,14 @@ namespace ISUTechnicalService
         private void btnupdate_Click(object sender, EventArgs e)
         {
             DataGridViewRow newDataRow = dataGridView1.Rows[indexRow];
-
-            newDataRow.Cells[6].Value = txtBrand.Text;
-            newDataRow.Cells[7].Value = txtModel.Text;
-            newDataRow.Cells[8].Value = txtTrouble.Text;
-            newDataRow.Cells[9].Value = txtPrice.Text;
-            newDataRow.Cells[10].Value = rdioComplete.Checked;
-            newDataRow.Cells[11].Value = rdioPayment.Checked;
-            newDataRow.Cells[12].Value = pickerDate.Text;
+            newDataRow.Cells["TC"].Value = txtTC.Text;
+            newDataRow.Cells["Brand"].Value = txtBrand.Text;
+            newDataRow.Cells["Model"].Value = txtModel.Text;
+            newDataRow.Cells["Trouble"].Value = txtTrouble.Text;
+           // newDataRow.Cells[9].Value = txtPrice.Text;
+            newDataRow.Cells[9].Value = rdioComplete.Checked;
+            newDataRow.Cells[10].Value = rdioPayment.Checked;
+            newDataRow.Cells[11].Value = pickerDate.Text;
             MessageBox.Show("Successfully updated!");
             txtBrand.Clear();
             txtModel.Clear();
@@ -124,13 +124,14 @@ namespace ISUTechnicalService
         {
             indexRow = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[indexRow];
+            txtTC.Text = row.Cells["TC"].Value.ToString();
             txtName.Text = row.Cells["Name"].Value.ToString();
             txtSurname.Text = row.Cells["Surname"].Value.ToString();
             txtMail.Text = row.Cells["Email"].Value.ToString();
             maskedTextBox1.Text = row.Cells["Phone"].Value.ToString();
             txtBrand.Text = row.Cells["Brand"].Value.ToString();
             txtModel.Text = row.Cells["Model"].Value.ToString();
-            txtPrice.Text = row.Cells["Price"].Value.ToString();
+            //txtPrice.Text = row.Cells["Price"].Value.ToString();
             txtTrouble.Text = row.Cells["Trouble"].Value.ToString();
             groupBox1.Text = row.Cells["Status"].Value.ToString();
             groupBox2.Text = row.Cells["Payment"].Value.ToString();
@@ -227,7 +228,13 @@ namespace ISUTechnicalService
             stock.Show();
         }
 
+        private void btnActionPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Transactions actions = new Transactions();
+            actions.Show();
         }
+    }
 
     }
 

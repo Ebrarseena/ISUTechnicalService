@@ -81,9 +81,9 @@ namespace ISUTechnicalService
                 .Property(e => e.Trouble)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Deviceİnfo>()
-              .Property(e => e.Price)
-              .IsOptional();
+            //modelBuilder.Entity<Deviceİnfo>()
+            //  .Property(e => e.Price)
+            //  .IsOptional();
 
 
             modelBuilder.Entity<Payment>()

@@ -29,8 +29,8 @@ namespace ISUTechnicalService
                 string name = txtUsername.Text;
                 this.Hide();
                 MessageBox.Show("Login Successful\n\nWelcome " +  name + "!");
-                Buy form2 = new Buy();
-                form2.Show();
+                DeviceTroubleRecord DeviceRecord = new DeviceTroubleRecord();
+                DeviceRecord.Show();
                 txtUsername.Clear();
                 txtPassword.Clear();
             }

@@ -43,7 +43,7 @@ namespace ISUTechnicalService
         [StringLength(100)]
         public string Trouble { get; set; }
 
-        public float Price { get; set; }
+        //public double Price { get; set; }
 
         public bool? Status { get; set; }
 

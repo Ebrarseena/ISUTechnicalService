@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceTroubleRecord));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTC = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
@@ -74,8 +74,7 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnActionPage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -105,7 +104,7 @@
             // txtSurname
             // 
             this.txtSurname.Enabled = false;
-            this.txtSurname.Location = new System.Drawing.Point(268, 252);
+            this.txtSurname.Location = new System.Drawing.Point(282, 252);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(106, 20);
@@ -123,28 +122,28 @@
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(537, 246);
+            this.txtBrand.Location = new System.Drawing.Point(538, 212);
             this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(106, 20);
-            this.txtBrand.TabIndex = 7;
+            this.txtBrand.TabIndex = 5;
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(538, 212);
+            this.txtModel.Location = new System.Drawing.Point(538, 248);
             this.txtModel.Margin = new System.Windows.Forms.Padding(2);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(106, 20);
-            this.txtModel.TabIndex = 6;
+            this.txtModel.TabIndex = 8;
             this.txtModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtModel_KeyPress);
             // 
             // txtTrouble
             // 
-            this.txtTrouble.Location = new System.Drawing.Point(538, 282);
+            this.txtTrouble.Location = new System.Drawing.Point(538, 285);
             this.txtTrouble.Margin = new System.Windows.Forms.Padding(2);
             this.txtTrouble.Name = "txtTrouble";
             this.txtTrouble.Size = new System.Drawing.Size(106, 20);
-            this.txtTrouble.TabIndex = 8;
+            this.txtTrouble.TabIndex = 9;
             this.txtTrouble.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTrouble_KeyPress);
             // 
             // ımageList2
@@ -156,6 +155,7 @@
             this.ımageList2.Images.SetKeyName(2, "icons8-add-folder-64.png");
             this.ımageList2.Images.SetKeyName(3, "icons8-available-updates-50.png");
             this.ımageList2.Images.SetKeyName(4, "orange_webpict30_1484337150.png");
+            this.ımageList2.Images.SetKeyName(5, "istockphoto-1206210024-170667a.jpg");
             // 
             // panel1
             // 
@@ -244,7 +244,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label7.Location = new System.Drawing.Point(474, 246);
+            this.label7.Location = new System.Drawing.Point(474, 251);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 14);
@@ -309,7 +309,7 @@
             // 
             this.maskedTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.maskedTextBox1.Enabled = false;
-            this.maskedTextBox1.Location = new System.Drawing.Point(268, 295);
+            this.maskedTextBox1.Location = new System.Drawing.Point(282, 295);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextBox1.Mask = "(999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -355,14 +355,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 436);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -423,10 +423,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(119, 18);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(108, 18);
+            this.radioButton1.Size = new System.Drawing.Size(74, 18);
             this.radioButton1.TabIndex = 44;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "Pending";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -434,10 +434,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(119, 18);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(108, 18);
+            this.radioButton2.Size = new System.Drawing.Size(74, 18);
             this.radioButton2.TabIndex = 45;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.Text = "Pending";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -446,7 +446,7 @@
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Font = new System.Drawing.Font("Cooper Black", 9F);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.groupBox2.Location = new System.Drawing.Point(680, 333);
+            this.groupBox2.Location = new System.Drawing.Point(548, 323);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(229, 41);
             this.groupBox2.TabIndex = 45;
@@ -467,10 +467,10 @@
             // btnNext
             // 
             this.btnNext.ImageKey = "istockphoto-1206210024-170667a.jpg";
-            this.btnNext.ImageList = this.ımageList1;
-            this.btnNext.Location = new System.Drawing.Point(799, 7);
+            this.btnNext.ImageList = this.ımageList2;
+            this.btnNext.Location = new System.Drawing.Point(839, 7);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(110, 30);
+            this.btnNext.Size = new System.Drawing.Size(70, 30);
             this.btnNext.TabIndex = 38;
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -482,7 +482,7 @@
             this.btntransfer.ImageList = this.ımageList1;
             this.btntransfer.Location = new System.Drawing.Point(268, 201);
             this.btntransfer.Name = "btntransfer";
-            this.btntransfer.Size = new System.Drawing.Size(30, 37);
+            this.btntransfer.Size = new System.Drawing.Size(39, 46);
             this.btntransfer.TabIndex = 37;
             this.btntransfer.UseVisualStyleBackColor = true;
             this.btntransfer.Click += new System.EventHandler(this.btntransfer_Click);
@@ -579,25 +579,18 @@
             this.btncreate.UseVisualStyleBackColor = false;
             this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
             // 
-            // txtPrice
+            // btnActionPage
             // 
-            this.txtPrice.Location = new System.Drawing.Point(538, 322);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(106, 20);
-            this.txtPrice.TabIndex = 46;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cooper Black", 9F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label9.Location = new System.Drawing.Point(474, 325);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 14);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "Price:";
+            this.btnActionPage.BackColor = System.Drawing.Color.White;
+            this.btnActionPage.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActionPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
+            this.btnActionPage.Location = new System.Drawing.Point(839, 43);
+            this.btnActionPage.Name = "btnActionPage";
+            this.btnActionPage.Size = new System.Drawing.Size(70, 34);
+            this.btnActionPage.TabIndex = 46;
+            this.btnActionPage.Text = "Action Page\r\n";
+            this.btnActionPage.UseVisualStyleBackColor = false;
+            this.btnActionPage.Click += new System.EventHandler(this.btnActionPage_Click);
             // 
             // DeviceTroubleRecord
             // 
@@ -605,8 +598,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(920, 660);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.btnActionPage);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pickerDate2);
@@ -704,7 +696,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnActionPage;
     }
 }

@@ -62,6 +62,7 @@
             this.btnTransfer = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRecordPage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -365,7 +366,6 @@
             // 
             // datePicker
             // 
-            this.datePicker.Enabled = false;
             this.datePicker.Location = new System.Drawing.Point(194, 439);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(163, 20);
@@ -405,12 +405,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnRecordPage
+            // 
+            this.btnRecordPage.BackColor = System.Drawing.Color.White;
+            this.btnRecordPage.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecordPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
+            this.btnRecordPage.Location = new System.Drawing.Point(806, 539);
+            this.btnRecordPage.Name = "btnRecordPage";
+            this.btnRecordPage.Size = new System.Drawing.Size(70, 34);
+            this.btnRecordPage.TabIndex = 47;
+            this.btnRecordPage.Text = "Record Page\r\n";
+            this.btnRecordPage.UseVisualStyleBackColor = false;
+            this.btnRecordPage.Click += new System.EventHandler(this.btnRecordPage_Click);
+            // 
             // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(902, 613);
+            this.Controls.Add(this.btnRecordPage);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.btnTransfer);
             this.Controls.Add(this.txtPrice);
@@ -486,5 +500,6 @@
         private System.Windows.Forms.Button btnTransfer;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.Button btnRecordPage;
     }
 }

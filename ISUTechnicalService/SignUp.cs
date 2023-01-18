@@ -48,8 +48,6 @@ namespace ISUTechnicalService
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
-
-
             Model2 model = new Model2();
             Customerİnfo customer = new Customerİnfo();
 
@@ -64,7 +62,6 @@ namespace ISUTechnicalService
             this.Hide();
             LOGİN login = new LOGİN();
             login.Show();
-
         }
 
        

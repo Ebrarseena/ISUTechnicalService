@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -150,8 +151,20 @@ namespace ISUTechnicalService
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Buy form22 = new Buy();
-            form22.Show();
+            DeviceTroubleRecord DeviceRecord = new DeviceTroubleRecord();
+            DeviceRecord.Show();
+        }
+
+        private void btnshopping_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Buy buy = new Buy();
+            buy.Show();
+        }
+
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+            fill();
         }
     }
 }
