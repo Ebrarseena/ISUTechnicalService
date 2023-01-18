@@ -201,7 +201,6 @@
             this.Name = "LOGİN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGİN";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LOGİN_FormClosed);
             this.Load += new System.EventHandler(this.LOGİN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

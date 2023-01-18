@@ -223,5 +223,8 @@
   <ItemGroup>
     <None Include="Resources\2194108_stock-photo-e-commerce-icon-orange-button.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-payments-credit-card-angle-text.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -60,15 +60,6 @@ namespace ISUTechnicalService
         private void btnPayment_Click(object sender, EventArgs e)
         {
             Model2 model = new Model2();
-            //Customerİnfo customer = new Customerİnfo();
-
-            //customer.TC = txtIdentity.Text;
-            //customer.Name = txtName.Text;
-            //customer.Surname = txtSurname.Text;
-            //customer.Email = txtEmail.Text;
-            //customer.Phone = maskedTextBox1.Text;
-            //model.Customerİnfo.Add(customer);
-            //model.SaveChanges();
             string Tcidentity = txtIdentity.Text;
 
             Deviceİnfo info = model.Deviceİnfo.Where(x => x.TC == Tcidentity).FirstOrDefault();
@@ -103,7 +94,9 @@ namespace ISUTechnicalService
                 txtSurname.Text = customer.Surname;
                 txtEmail.Text = customer.Email;
                 maskedTextBox1.Text = customer.Phone;
+                txtPrice.Text = trouble.Price.ToString();
                 txtProcess.Text = trouble.Trouble;
+
             }
         }
 
@@ -120,15 +113,6 @@ namespace ISUTechnicalService
                     if (deviceİnfo.Status == true)
                     {
                         txtStatus.Text = "Prepared";
-                    }
-                    else
-                    {
-                        txtStatus.Text = "On Hold";
-                    }
-
-                    if(deviceİnfo.Payment == true)
-                    {
-                        txtStatus.Text = "Payment Complete";
                     }
                     else
                     {

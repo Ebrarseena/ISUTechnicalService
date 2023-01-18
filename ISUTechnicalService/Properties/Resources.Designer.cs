@@ -284,6 +284,17 @@ namespace ISUTechnicalService.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_payment_terminal_e_commerce_payment_system_credit_card_alternative_payments_credit_card_angle_text {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-pa" +
+                        "yments-credit-card-angle-text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_amazon_com_shopping_cart_x_cart_shopping_cart_angle_text_orange_thumbnail {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-amazon-com-shopping-cart-x-cart-shopping-cart-angle-text-orange-t" +

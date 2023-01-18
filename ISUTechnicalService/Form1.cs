@@ -29,7 +29,7 @@ namespace ISUTechnicalService
                 string name = txtUsername.Text;
                 this.Hide();
                 MessageBox.Show("Login Successful\n\nWelcome " +  name + "!");
-                DeviceTroubleRecord form2 = new DeviceTroubleRecord();
+                Buy form2 = new Buy();
                 form2.Show();
                 txtUsername.Clear();
                 txtPassword.Clear();
@@ -112,9 +112,5 @@ namespace ISUTechnicalService
             up.Show(); 
         }
 
-        private void LOGİN_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
     }
 }

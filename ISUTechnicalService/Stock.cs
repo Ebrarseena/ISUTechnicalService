@@ -147,11 +147,11 @@ namespace ISUTechnicalService
             app.Quit();
         }
 
-        private void btnsales_Click(object sender, EventArgs e)
-        {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        private void button1_Click(object sender, EventArgs e)
+        {
             this.Hide();
-            Buy buy = new Buy();
-            buy.Show();
+            Buy form22 = new Buy();
+            form22.Show();
         }
     }
 }

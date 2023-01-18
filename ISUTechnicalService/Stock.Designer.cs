@@ -51,7 +51,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnExcel = new System.Windows.Forms.Button();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.btnsales = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -290,20 +290,15 @@
             this.ımageList2.Images.SetKeyName(1, "png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-pa" +
         "yments-credit-card-angle-text.png");
             // 
-            // btnsales
+            // button1
             // 
-            this.btnsales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.btnsales.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsales.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsales.ImageKey = "png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-pa" +
-    "yments-credit-card-angle-text.png";
-            this.btnsales.ImageList = this.ımageList2;
-            this.btnsales.Location = new System.Drawing.Point(592, 12);
-            this.btnsales.Name = "btnsales";
-            this.btnsales.Size = new System.Drawing.Size(58, 43);
-            this.btnsales.TabIndex = 31;
-            this.btnsales.UseVisualStyleBackColor = false;
-            this.btnsales.Click += new System.EventHandler(this.btnsales_Click);
+            this.button1.Location = new System.Drawing.Point(804, 237);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Stock
             // 
@@ -311,7 +306,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(902, 611);
-            this.Controls.Add(this.btnsales);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -362,6 +357,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.ImageList ımageList2;
-        private System.Windows.Forms.Button btnsales;
+        private System.Windows.Forms.Button button1;
     }
 }

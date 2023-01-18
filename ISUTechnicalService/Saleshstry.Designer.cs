@@ -48,14 +48,15 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.btnExcel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.btnsales = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,12 +66,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(299, 34);
+            this.label1.Location = new System.Drawing.Point(322, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 25);
+            this.label1.Size = new System.Drawing.Size(206, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TRANSACTION HISTORY";
+            this.label1.Text = "SALES  HISTORY";
             // 
             // label2
             // 
@@ -241,7 +242,8 @@
             this.dataGridView1.Size = new System.Drawing.Size(868, 242);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+      //      this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // ımageList1
             // 
@@ -250,6 +252,39 @@
             this.ımageList1.Images.SetKeyName(0, "icons8-add-folder-64.png");
             this.ımageList1.Images.SetKeyName(1, "icons8-available-updates-50.png");
             this.ımageList1.Images.SetKeyName(2, "icons8-trash-50.png");
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(612, 102);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.maskedTextBox1.Mask = "(999) 000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(126, 20);
+            this.maskedTextBox1.TabIndex = 12;
+            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ımageList2
+            // 
+            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
+            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList2.Images.SetKeyName(0, "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg");
+            this.ımageList2.Images.SetKeyName(1, "png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-pa" +
+        "yments-credit-card-angle-text.png");
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.ImageKey = "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg";
+            this.btnExcel.ImageList = this.ımageList2;
+            this.btnExcel.Location = new System.Drawing.Point(828, 21);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(56, 56);
+            this.btnExcel.TabIndex = 24;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // pictureBox1
             // 
@@ -278,7 +313,7 @@
             this.btndelete.TabIndex = 21;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+      //      this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnupdate
             // 
@@ -296,7 +331,7 @@
             this.btnupdate.TabIndex = 20;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
-            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+      //      this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btncreate
             // 
@@ -314,38 +349,19 @@
             this.btncreate.TabIndex = 19;
             this.btncreate.Text = "CREATE";
             this.btncreate.UseVisualStyleBackColor = false;
-            this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
+     //       this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
             // 
-            // maskedTextBox1
+            // btnsales
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(612, 102);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(126, 20);
-            this.maskedTextBox1.TabIndex = 12;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.ImageKey = "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg";
-            this.btnExcel.ImageList = this.ımageList2;
-            this.btnExcel.Location = new System.Drawing.Point(828, 21);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(56, 56);
-            this.btnExcel.TabIndex = 24;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // ımageList2
-            // 
-            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
-            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList2.Images.SetKeyName(0, "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg");
+            this.btnsales.ImageKey = "png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-pa" +
+    "yments-credit-card-angle-text.png";
+            this.btnsales.ImageList = this.ımageList2;
+            this.btnsales.Location = new System.Drawing.Point(556, 12);
+            this.btnsales.Name = "btnsales";
+            this.btnsales.Size = new System.Drawing.Size(61, 47);
+            this.btnsales.TabIndex = 25;
+            this.btnsales.UseVisualStyleBackColor = true;
+            this.btnsales.Click += new System.EventHandler(this.btnsales_Click);
             // 
             // Saleshstry
             // 
@@ -353,6 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(902, 611);
+            this.Controls.Add(this.btnsales);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.pictureBox1);
@@ -380,6 +397,7 @@
             this.Name = "Saleshstry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saleshstry";
+            this.Load += new System.EventHandler(this.Saleshstry_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -415,5 +433,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.ImageList ımageList2;
+        private System.Windows.Forms.Button btnsales;
     }
 }

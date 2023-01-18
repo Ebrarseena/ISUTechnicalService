@@ -59,6 +59,7 @@ namespace ISUTechnicalService
                 deviceinfo.Brand = txtBrand.Text;          // Databasede bulunan brand ile formdaki txtBrand verisinin eşit olduğunu bildirir.
                 deviceinfo.Model = txtModel.Text;
                 deviceinfo.Trouble = txtTrouble.Text;
+                deviceinfo.Price = Convert.ToSingle(txtPrice.Text);
                 deviceinfo.Status = rdioComplete.Checked;
                 deviceinfo.Payment = rdioPayment.Checked;
                 deviceinfo.Date = DateTime.Now;
@@ -96,9 +97,10 @@ namespace ISUTechnicalService
             newDataRow.Cells[6].Value = txtBrand.Text;
             newDataRow.Cells[7].Value = txtModel.Text;
             newDataRow.Cells[8].Value = txtTrouble.Text;
-            newDataRow.Cells[9].Value = rdioComplete.Checked;
-            newDataRow.Cells[10].Value = rdioPayment.Checked;
-            newDataRow.Cells[11].Value = pickerDate.Text;
+            newDataRow.Cells[9].Value = txtPrice.Text;
+            newDataRow.Cells[10].Value = rdioComplete.Checked;
+            newDataRow.Cells[11].Value = rdioPayment.Checked;
+            newDataRow.Cells[12].Value = pickerDate.Text;
             MessageBox.Show("Successfully updated!");
             txtBrand.Clear();
             txtModel.Clear();
@@ -118,7 +120,7 @@ namespace ISUTechnicalService
             MessageBox.Show("Deletion completed!");
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)   
         {
             indexRow = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[indexRow];
@@ -128,6 +130,7 @@ namespace ISUTechnicalService
             maskedTextBox1.Text = row.Cells["Phone"].Value.ToString();
             txtBrand.Text = row.Cells["Brand"].Value.ToString();
             txtModel.Text = row.Cells["Model"].Value.ToString();
+            txtPrice.Text = row.Cells["Price"].Value.ToString();
             txtTrouble.Text = row.Cells["Trouble"].Value.ToString();
             groupBox1.Text = row.Cells["Status"].Value.ToString();
             groupBox2.Text = row.Cells["Payment"].Value.ToString();
