@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceTroubleRecord));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTC = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
@@ -38,7 +38,6 @@
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtTrouble = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,8 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pickerDate = new System.Windows.Forms.DateTimePicker();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -59,23 +56,34 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rdioComplete = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rdioPayment = new System.Windows.Forms.RadioButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pickerDate2 = new System.Windows.Forms.DateTimePicker();
+            this.btnrefresh = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btntransfer = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnexcel = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btntransfer = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(146, 216);
+            this.txtTC.Location = new System.Drawing.Point(151, 212);
             this.txtTC.Margin = new System.Windows.Forms.Padding(2);
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(106, 20);
@@ -84,6 +92,7 @@
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(69, 254);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
@@ -93,6 +102,7 @@
             // 
             // txtSurname
             // 
+            this.txtSurname.Enabled = false;
             this.txtSurname.Location = new System.Drawing.Point(268, 252);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.Name = "txtSurname";
@@ -102,7 +112,8 @@
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(69, 290);
+            this.txtMail.Enabled = false;
+            this.txtMail.Location = new System.Drawing.Point(67, 295);
             this.txtMail.Margin = new System.Windows.Forms.Padding(2);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(106, 20);
@@ -110,7 +121,7 @@
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(537, 271);
+            this.txtBrand.Location = new System.Drawing.Point(537, 257);
             this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(106, 20);
@@ -118,7 +129,7 @@
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(537, 239);
+            this.txtModel.Location = new System.Drawing.Point(537, 218);
             this.txtModel.Margin = new System.Windows.Forms.Padding(2);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(106, 20);
@@ -127,21 +138,12 @@
             // 
             // txtTrouble
             // 
-            this.txtTrouble.Location = new System.Drawing.Point(537, 303);
+            this.txtTrouble.Location = new System.Drawing.Point(537, 295);
             this.txtTrouble.Margin = new System.Windows.Forms.Padding(2);
             this.txtTrouble.Name = "txtTrouble";
             this.txtTrouble.Size = new System.Drawing.Size(106, 20);
             this.txtTrouble.TabIndex = 8;
             this.txtTrouble.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTrouble_KeyPress);
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(741, 271);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(106, 20);
-            this.txtPrice.TabIndex = 10;
-            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // ımageList2
             // 
@@ -151,6 +153,7 @@
             this.ımageList2.Images.SetKeyName(1, "icons8-trash-50.png");
             this.ımageList2.Images.SetKeyName(2, "icons8-add-folder-64.png");
             this.ımageList2.Images.SetKeyName(3, "icons8-available-updates-50.png");
+            this.ımageList2.Images.SetKeyName(4, "orange_webpict30_1484337150.png");
             // 
             // panel1
             // 
@@ -167,7 +170,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(163, 201);
+            this.label1.Location = new System.Drawing.Point(163, 189);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 14);
@@ -203,7 +206,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label4.Location = new System.Drawing.Point(23, 295);
+            this.label4.Location = new System.Drawing.Point(22, 301);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 14);
@@ -215,7 +218,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label5.Location = new System.Drawing.Point(212, 295);
+            this.label5.Location = new System.Drawing.Point(212, 301);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 14);
@@ -227,7 +230,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label6.Location = new System.Drawing.Point(485, 241);
+            this.label6.Location = new System.Drawing.Point(485, 224);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 14);
@@ -239,7 +242,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label7.Location = new System.Drawing.Point(485, 274);
+            this.label7.Location = new System.Drawing.Point(485, 263);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 14);
@@ -251,43 +254,19 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label8.Location = new System.Drawing.Point(485, 303);
+            this.label8.Location = new System.Drawing.Point(485, 301);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 14);
             this.label8.TabIndex = 25;
             this.label8.Text = "Trouble:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label9.Location = new System.Drawing.Point(698, 241);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 14);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Status:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label10.Location = new System.Drawing.Point(698, 274);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 14);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Price:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label11.Location = new System.Drawing.Point(698, 303);
+            this.label11.Location = new System.Drawing.Point(698, 279);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 14);
@@ -297,7 +276,7 @@
             // pickerDate
             // 
             this.pickerDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pickerDate.Location = new System.Drawing.Point(742, 303);
+            this.pickerDate.Location = new System.Drawing.Point(759, 273);
             this.pickerDate.Margin = new System.Windows.Forms.Padding(2);
             this.pickerDate.Name = "pickerDate";
             this.pickerDate.Size = new System.Drawing.Size(151, 20);
@@ -309,6 +288,7 @@
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList1.Images.SetKeyName(0, "1200x600wa.png");
             this.ımageList1.Images.SetKeyName(1, "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg");
+            this.ımageList1.Images.SetKeyName(2, "istockphoto-1206210024-170667a.jpg");
             // 
             // DeviceTrouble
             // 
@@ -326,7 +306,8 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.maskedTextBox1.Location = new System.Drawing.Point(268, 290);
+            this.maskedTextBox1.Enabled = false;
+            this.maskedTextBox1.Location = new System.Drawing.Point(268, 295);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextBox1.Mask = "(999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -358,10 +339,108 @@
             this.panel2.Size = new System.Drawing.Size(1, 268);
             this.panel2.TabIndex = 0;
             // 
+            // rdioComplete
+            // 
+            this.rdioComplete.AutoSize = true;
+            this.rdioComplete.Location = new System.Drawing.Point(8, 19);
+            this.rdioComplete.Margin = new System.Windows.Forms.Padding(2);
+            this.rdioComplete.Name = "rdioComplete";
+            this.rdioComplete.Size = new System.Drawing.Size(78, 18);
+            this.rdioComplete.TabIndex = 9;
+            this.rdioComplete.Text = "Complete";
+            this.rdioComplete.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 414);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(886, 201);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // rdioPayment
+            // 
+            this.rdioPayment.AutoSize = true;
+            this.rdioPayment.Location = new System.Drawing.Point(8, 18);
+            this.rdioPayment.Name = "rdioPayment";
+            this.rdioPayment.Size = new System.Drawing.Size(78, 18);
+            this.rdioPayment.TabIndex = 40;
+            this.rdioPayment.Text = "Complete";
+            this.rdioPayment.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
+            this.label12.Location = new System.Drawing.Point(698, 304);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 14);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "Delivery:";
+            // 
+            // pickerDate2
+            // 
+            this.pickerDate2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pickerDate2.Location = new System.Drawing.Point(759, 304);
+            this.pickerDate2.Margin = new System.Windows.Forms.Padding(2);
+            this.pickerDate2.Name = "pickerDate2";
+            this.pickerDate2.Size = new System.Drawing.Size(151, 20);
+            this.pickerDate2.TabIndex = 42;
+            // 
+            // btnrefresh
+            // 
+            this.btnrefresh.ImageKey = "orange_webpict30_1484337150.png";
+            this.btnrefresh.ImageList = this.ımageList2;
+            this.btnrefresh.Location = new System.Drawing.Point(870, 380);
+            this.btnrefresh.Name = "btnrefresh";
+            this.btnrefresh.Size = new System.Drawing.Size(31, 29);
+            this.btnrefresh.TabIndex = 39;
+            this.btnrefresh.UseVisualStyleBackColor = true;
+            this.btnrefresh.Click += new System.EventHandler(this.btnrefresh_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.ImageKey = "istockphoto-1206210024-170667a.jpg";
+            this.btnNext.ImageList = this.ımageList1;
+            this.btnNext.Location = new System.Drawing.Point(799, 7);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(110, 30);
+            this.btnNext.TabIndex = 38;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btntransfer
+            // 
+            this.btntransfer.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntransfer.ImageKey = "1200x600wa.png";
+            this.btntransfer.ImageList = this.ımageList1;
+            this.btntransfer.Location = new System.Drawing.Point(268, 201);
+            this.btntransfer.Name = "btntransfer";
+            this.btntransfer.Size = new System.Drawing.Size(30, 37);
+            this.btntransfer.TabIndex = 37;
+            this.btntransfer.UseVisualStyleBackColor = true;
+            this.btntransfer.Click += new System.EventHandler(this.btntransfer_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::ISUTechnicalService.Properties.Resources.OriginalPng_1;
-            this.pictureBox3.Location = new System.Drawing.Point(580, 69);
+            this.pictureBox3.Location = new System.Drawing.Point(580, 56);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(197, 116);
@@ -372,7 +451,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ISUTechnicalService.Properties.Resources.man_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(107, 69);
+            this.pictureBox2.Location = new System.Drawing.Point(110, 56);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(170, 116);
@@ -405,7 +484,7 @@
             this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndelete.ImageKey = "icons8-trash-50.png";
             this.btndelete.ImageList = this.ımageList2;
-            this.btndelete.Location = new System.Drawing.Point(580, 348);
+            this.btndelete.Location = new System.Drawing.Point(580, 357);
             this.btndelete.Margin = new System.Windows.Forms.Padding(2);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(136, 30);
@@ -423,7 +502,7 @@
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.ImageKey = "icons8-available-updates-50.png";
             this.btnupdate.ImageList = this.ımageList2;
-            this.btnupdate.Location = new System.Drawing.Point(376, 348);
+            this.btnupdate.Location = new System.Drawing.Point(376, 357);
             this.btnupdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(134, 30);
@@ -441,7 +520,7 @@
             this.btncreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncreate.ImageKey = "icons8-add-folder-64.png";
             this.btncreate.ImageList = this.ımageList2;
-            this.btncreate.Location = new System.Drawing.Point(166, 348);
+            this.btncreate.Location = new System.Drawing.Point(166, 357);
             this.btncreate.Margin = new System.Windows.Forms.Padding(2);
             this.btncreate.Name = "btncreate";
             this.btncreate.Size = new System.Drawing.Size(132, 30);
@@ -450,59 +529,67 @@
             this.btncreate.UseVisualStyleBackColor = false;
             this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdioComplete);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Font = new System.Drawing.Font("Bauhaus 93", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
+            this.groupBox1.Location = new System.Drawing.Point(680, 177);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(221, 41);
+            this.groupBox1.TabIndex = 43;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Status";
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(741, 240);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton1.Location = new System.Drawing.Point(119, 18);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 17);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.Text = "Complete";
+            this.radioButton1.Size = new System.Drawing.Size(94, 18);
+            this.radioButton1.TabIndex = 44;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // btntransfer
+            // radioButton2
             // 
-            this.btntransfer.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntransfer.ImageKey = "1200x600wa.png";
-            this.btntransfer.ImageList = this.ımageList1;
-            this.btntransfer.Location = new System.Drawing.Point(268, 201);
-            this.btntransfer.Name = "btntransfer";
-            this.btntransfer.Size = new System.Drawing.Size(30, 37);
-            this.btntransfer.TabIndex = 37;
-            this.btntransfer.UseVisualStyleBackColor = true;
-            this.btntransfer.Click += new System.EventHandler(this.btntransfer_Click);
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(119, 18);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(94, 18);
+            this.radioButton2.TabIndex = 45;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // groupBox2
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 395);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(876, 201);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.groupBox2.Controls.Add(this.rdioPayment);
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Font = new System.Drawing.Font("Bauhaus 93", 9F);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
+            this.groupBox2.Location = new System.Drawing.Point(680, 224);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(221, 41);
+            this.groupBox2.TabIndex = 45;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Payment Status";
             // 
             // DeviceTroubleRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(906, 622);
+            this.ClientSize = new System.Drawing.Size(921, 635);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pickerDate2);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnrefresh);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btntransfer);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -512,8 +599,6 @@
             this.Controls.Add(this.btnexcel);
             this.Controls.Add(this.pickerDate);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -526,7 +611,6 @@
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btncreate);
-            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtTrouble);
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.txtBrand);
@@ -540,9 +624,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Device Trouble Record";
             this.Load += new System.EventHandler(this.DeviceTroubleRecord_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,7 +644,6 @@
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtTrouble;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btncreate;
         private System.Windows.Forms.Button btnupdate;
         private System.Windows.Forms.Panel panel1;
@@ -569,8 +656,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker pickerDate;
         private System.Windows.Forms.Button btnexcel;
@@ -583,8 +668,17 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdioComplete;
         private System.Windows.Forms.Button btntransfer;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnrefresh;
+        private System.Windows.Forms.RadioButton rdioPayment;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker pickerDate2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

@@ -40,15 +40,23 @@ namespace ISUTechnicalService
             Text = DateTime.Now.ToLongDateString();
         }
 
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+
         private void btnComplete_Click(object sender, EventArgs e)
         {
+
+
             Model2 model = new Model2();
             Customerİnfo customer = new Customerİnfo();
 
             customer.TC = txtIdentity.Text;
             customer.Name = txtName.Text;
             customer.Surname = txtSurname.Text;
-            customer.Email = txtEmail.Text;
+            customer.Email = Base64Encode(txtEmail.Text);
             customer.Phone = maskedTextBox1.Text;
             model.Customerİnfo.Add(customer);
             model.SaveChanges();
@@ -58,5 +66,7 @@ namespace ISUTechnicalService
             login.Show();
 
         }
+
+       
     }
 }

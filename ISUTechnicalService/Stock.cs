@@ -146,5 +146,12 @@ namespace ISUTechnicalService
             }
             app.Quit();
         }
+
+        private void btnsales_Click(object sender, EventArgs e)
+        {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+            this.Hide();
+            Buy buy = new Buy();
+            buy.Show();
+        }
     }
 }

@@ -41,9 +41,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnPayment = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtIdentity = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
@@ -59,11 +57,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtProcess = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnTransfer = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.btnTransfer = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -166,7 +164,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label8.Location = new System.Drawing.Point(522, 221);
+            this.label8.Location = new System.Drawing.Point(531, 221);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 16);
@@ -178,7 +176,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label9.Location = new System.Drawing.Point(522, 272);
+            this.label9.Location = new System.Drawing.Point(531, 272);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 16);
@@ -199,41 +197,19 @@
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
-            // button2
+            // btnSearch
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.button2.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(573, 332);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 28);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ISUTechnicalService.Properties.Resources._3616883;
-            this.pictureBox2.Location = new System.Drawing.Point(765, 23);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 104);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ISUTechnicalService.Properties.Resources.cash_money_finance_debt_icon_orange_vector_design_use_designing_developing_websites_commercial_purposes_web_any_type_229927353;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
+            this.btnSearch.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(573, 332);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(173, 28);
+            this.btnSearch.TabIndex = 25;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtIdentity
             // 
@@ -246,6 +222,7 @@
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(194, 190);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
@@ -255,6 +232,7 @@
             // 
             // txtSurname
             // 
+            this.txtSurname.Enabled = false;
             this.txtSurname.Location = new System.Drawing.Point(194, 231);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.Name = "txtSurname";
@@ -264,6 +242,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(194, 275);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
@@ -272,7 +251,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(623, 221);
+            this.txtID.Location = new System.Drawing.Point(645, 220);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(123, 20);
@@ -281,7 +260,7 @@
             // 
             // txtıdentity
             // 
-            this.txtıdentity.Location = new System.Drawing.Point(623, 272);
+            this.txtıdentity.Location = new System.Drawing.Point(645, 271);
             this.txtıdentity.Margin = new System.Windows.Forms.Padding(2);
             this.txtıdentity.Name = "txtıdentity";
             this.txtıdentity.Size = new System.Drawing.Size(123, 20);
@@ -311,6 +290,7 @@
             // 
             // maskedTextBox1
             // 
+            this.maskedTextBox1.Enabled = false;
             this.maskedTextBox1.Location = new System.Drawing.Point(194, 319);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextBox1.Mask = "(999) 000-0000";
@@ -361,6 +341,7 @@
             // 
             // txtProcess
             // 
+            this.txtProcess.Enabled = false;
             this.txtProcess.Location = new System.Drawing.Point(195, 361);
             this.txtProcess.Margin = new System.Windows.Forms.Padding(2);
             this.txtProcess.Name = "txtProcess";
@@ -369,32 +350,26 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.Enabled = false;
             this.txtPrice.Location = new System.Drawing.Point(195, 397);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(123, 20);
             this.txtPrice.TabIndex = 20;
             // 
-            // label14
+            // ımageList1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
-            this.label14.Location = new System.Drawing.Point(18, 542);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 16);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Money in account:";
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "1200x600wa.png");
             // 
-            // textBox1
+            // datePicker
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(21, 569);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 20);
-            this.textBox1.TabIndex = 31;
+            this.datePicker.Enabled = false;
+            this.datePicker.Location = new System.Drawing.Point(194, 439);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(163, 20);
+            this.datePicker.TabIndex = 33;
             // 
             // btnTransfer
             // 
@@ -408,18 +383,27 @@
             this.btnTransfer.UseVisualStyleBackColor = true;
             this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
-            // ımageList1
+            // pictureBox2
             // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "1200x600wa.png");
+            this.pictureBox2.Image = global::ISUTechnicalService.Properties.Resources._3616883;
+            this.pictureBox2.Location = new System.Drawing.Point(765, 23);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(111, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
-            // datePicker
+            // pictureBox1
             // 
-            this.datePicker.Location = new System.Drawing.Point(194, 439);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(163, 20);
-            this.datePicker.TabIndex = 33;
+            this.pictureBox1.Image = global::ISUTechnicalService.Properties.Resources.cash_money_finance_debt_icon_orange_vector_design_use_designing_developing_websites_commercial_purposes_web_any_type_229927353;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Transactions
             // 
@@ -429,8 +413,6 @@
             this.ClientSize = new System.Drawing.Size(902, 613);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.btnTransfer);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtProcess);
             this.Controls.Add(this.label13);
@@ -446,7 +428,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtIdentity);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -463,7 +445,6 @@
             this.Name = "Transactions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transactions";
-            this.Load += new System.EventHandler(this.Transactions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -485,7 +466,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnPayment;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtIdentity;
         private System.Windows.Forms.TextBox txtName;
@@ -502,8 +483,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtProcess;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnTransfer;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.DateTimePicker datePicker;

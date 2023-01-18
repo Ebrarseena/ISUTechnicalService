@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtCategory = new System.Windows.Forms.TextBox();
@@ -51,21 +51,22 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnExcel = new System.Windows.Forms.Button();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.btnsales = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill; //Gridin içindeki verilerin gridi tamamen kaplaması için
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 352);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -274,9 +275,9 @@
             // 
             this.btnExcel.ImageKey = "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg";
             this.btnExcel.ImageList = this.ımageList2;
-            this.btnExcel.Location = new System.Drawing.Point(815, 26);
+            this.btnExcel.Location = new System.Drawing.Point(819, 26);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(64, 62);
+            this.btnExcel.Size = new System.Drawing.Size(60, 62);
             this.btnExcel.TabIndex = 29;
             this.btnExcel.UseVisualStyleBackColor = true;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
@@ -286,6 +287,23 @@
             this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
             this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList2.Images.SetKeyName(0, "360_F_550780557_AwtF0iikbnRMDUlKqML6SiTYeTFWk3zK.jpg");
+            this.ımageList2.Images.SetKeyName(1, "png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-pa" +
+        "yments-credit-card-angle-text.png");
+            // 
+            // btnsales
+            // 
+            this.btnsales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(106)))), ((int)(((byte)(44)))));
+            this.btnsales.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsales.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsales.ImageKey = "png-clipart-payment-terminal-e-commerce-payment-system-credit-card-alternative-pa" +
+    "yments-credit-card-angle-text.png";
+            this.btnsales.ImageList = this.ımageList2;
+            this.btnsales.Location = new System.Drawing.Point(592, 12);
+            this.btnsales.Name = "btnsales";
+            this.btnsales.Size = new System.Drawing.Size(58, 43);
+            this.btnsales.TabIndex = 31;
+            this.btnsales.UseVisualStyleBackColor = false;
+            this.btnsales.Click += new System.EventHandler(this.btnsales_Click);
             // 
             // Stock
             // 
@@ -293,6 +311,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(902, 611);
+            this.Controls.Add(this.btnsales);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -343,5 +362,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.ImageList ımageList2;
+        private System.Windows.Forms.Button btnsales;
     }
 }

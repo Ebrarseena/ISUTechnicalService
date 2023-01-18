@@ -35,7 +35,7 @@ namespace ISUTechnicalService
                 txtPassword.Clear();
             }
 
-            else if (model.Customerİnfo.Any(x => x.TC == txtUsername.Text && x.Surname == txtPassword.Text)) // Databasede bulunan Customerİnfo tablosundaki verilerle textboxtaki veriler uyuştuğu taktirde bu koşula girer
+            else if (model.Customerİnfo.Any(x => x.Surname == txtUsername.Text && x.TC == txtPassword.Text)) // Databasede bulunan Customerİnfo tablosundaki verilerle textboxtaki veriler uyuştuğu taktirde bu koşula girer
             {
                 string name = txtUsername.Text;
                 this.Hide();
@@ -107,8 +107,14 @@ namespace ISUTechnicalService
 
         private void btnAppointment_Click(object sender, EventArgs e)  
         {
+            this.Hide();
             SignUp up = new SignUp();           //Yönlendirilecek sayfayı belirtir
             up.Show(); 
+        }
+
+        private void LOGİN_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

@@ -83,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminPanel.cs" />
+    <Compile Include="Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy.Designer.cs">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customerİnfo.cs" />
     <Compile Include="Deviceİnfo.cs" />
     <Compile Include="Form1.cs">
@@ -128,6 +134,9 @@
     <Compile Include="Transactions.Designer.cs">
       <DependentUpon>Transactions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Buy.resx">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,52 +182,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\personel-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\personel.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\man-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\207-2074901_woman-icon-avatar-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\technical.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3439971.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pc2.jfif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pc3.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blgs.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vector-for-free-use-desktop-computer-icon-0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vector-for-free-use-desktop-computer-icon-01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\profesyonel-teknik-servis.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Monitor picture.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Huawei.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Pixelbook.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\OriginalPng 1.png" />
@@ -236,16 +203,10 @@
     <None Include="Resources\istockphoto-817298388-170667a.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\1200x630wa.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1200x630wa1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\png-transparent-telephone-ico-mobile-device-icon-keys-phone-gadget-orange-phone-icon-thumbnail1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\3616883.png" />
@@ -258,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cash-money-finance-debt-icon-orange-vector-design-use-designing-developing-websites-commercial-purposes-web-any-type-229927353.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2194108_stock-photo-e-commerce-icon-orange-button.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ namespace ISUTechnicalService
 
     public partial class Deviceİnfo
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [Required]
@@ -45,8 +45,10 @@ namespace ISUTechnicalService
 
         public bool? Status { get; set; }
 
-        public double Price { get; set; }
+        public bool? Payment { get; set; }
 
         public DateTime Date { get; set; }
+
+        public DateTime Delivery { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DevExpress.Data.ODataLinq.Helpers;
 using DevExpress.Utils.About;
 using DevExpress.XtraEditors.Repository;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace ISUTechnicalService
     public partial class DeviceTroubleRecord : Form
     {
 
-        Model2 model = new Model2(); // SOR
+        Model2 model = new Model2();
         int indexRow;
         int select = 0;
         public DeviceTroubleRecord()
@@ -44,6 +45,11 @@ namespace ISUTechnicalService
             Text = DateTime.Now.ToLongDateString();
         }
 
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
         private void btncreate_Click(object sender, EventArgs e)  
         {
             try
@@ -53,14 +59,15 @@ namespace ISUTechnicalService
                 deviceinfo.Brand = txtBrand.Text;          // Databasede bulunan brand ile formdaki txtBrand verisinin eşit olduğunu bildirir.
                 deviceinfo.Model = txtModel.Text;
                 deviceinfo.Trouble = txtTrouble.Text;
-                deviceinfo.Status = radioButton1.Checked;
-                deviceinfo.Price = Convert.ToDouble(txtPrice.Text);
+                deviceinfo.Status = rdioComplete.Checked;
+                deviceinfo.Payment = rdioPayment.Checked;
                 deviceinfo.Date = DateTime.Now;
+                deviceinfo.Delivery = DateTime.Now;
                 deviceinfo.Name = txtName.Text;
                 deviceinfo.Surname = txtSurname.Text;
                 deviceinfo.Phone = maskedTextBox1.Text;
                 deviceinfo.TC = txtTC.Text;
-                deviceinfo.Email = txtMail.Text;
+                deviceinfo.Email = Base64Decode(txtMail.Text);
                 models.Deviceİnfo.Add(deviceinfo);
                 models.SaveChanges();
 
@@ -70,37 +77,34 @@ namespace ISUTechnicalService
                 txtBrand.Clear();       //Textboxlar temizlenir
                 txtModel.Clear();
                 txtTrouble.Clear();
-                txtPrice.Clear();
-                radioButton1.ResetText();   
+                rdioPayment.ResetText();
+                rdioComplete.ResetText();   
                 pickerDate.ResetText();
                 fill();
             }
+
              catch (Exception exs)
             {
                 string hata = exs.Message;
             }
-
-            
-
-    
         }
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
             DataGridViewRow newDataRow = dataGridView1.Rows[indexRow];
 
-            newDataRow.Cells[1].Value = txtBrand.Text;
-            newDataRow.Cells[2].Value = txtModel.Text;
-            newDataRow.Cells[3].Value = txtTrouble.Text;
-            newDataRow.Cells[4].Value = radioButton1.Checked;
-            newDataRow.Cells[5].Value = txtPrice.Text;
-            newDataRow.Cells[6].Value = pickerDate.Text;
+            newDataRow.Cells[6].Value = txtBrand.Text;
+            newDataRow.Cells[7].Value = txtModel.Text;
+            newDataRow.Cells[8].Value = txtTrouble.Text;
+            newDataRow.Cells[9].Value = rdioComplete.Checked;
+            newDataRow.Cells[10].Value = rdioPayment.Checked;
+            newDataRow.Cells[11].Value = pickerDate.Text;
             MessageBox.Show("Successfully updated!");
             txtBrand.Clear();
             txtModel.Clear();
             txtTrouble.Clear();
-            radioButton1.ResetText();
-            txtPrice.Clear();
+            rdioComplete.ResetText();
+            rdioPayment.ResetText();
             pickerDate.ResetText();
             model.SaveChanges();
         }
@@ -110,20 +114,25 @@ namespace ISUTechnicalService
             Deviceİnfo device = model.Deviceİnfo.FirstOrDefault(x => x.ID == select);
             model.Deviceİnfo.Remove(device);
             model.SaveChanges();
-            MessageBox.Show("Deletion completed!");
             fill();
+            MessageBox.Show("Deletion completed!");
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             indexRow = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[indexRow];
-            txtBrand.Text = row.Cells[1].Value.ToString();
-            txtModel.Text = row.Cells[2].Value.ToString();
-            txtTrouble.Text = row.Cells[3].Value.ToString();
-            radioButton1.Text = row.Cells[4].Value.ToString();
-            txtPrice.Text = row.Cells[5].Value.ToString();
-            pickerDate.Text = row.Cells[6].Value.ToString();
+            txtName.Text = row.Cells["Name"].Value.ToString();
+            txtSurname.Text = row.Cells["Surname"].Value.ToString();
+            txtMail.Text = row.Cells["Email"].Value.ToString();
+            maskedTextBox1.Text = row.Cells["Phone"].Value.ToString();
+            txtBrand.Text = row.Cells["Brand"].Value.ToString();
+            txtModel.Text = row.Cells["Model"].Value.ToString();
+            txtTrouble.Text = row.Cells["Trouble"].Value.ToString();
+            groupBox1.Text = row.Cells["Status"].Value.ToString();
+            groupBox2.Text = row.Cells["Payment"].Value.ToString();
+            pickerDate.Text = row.Cells["Date"].Value.ToString();
+            pickerDate2.Text = row.Cells["Delivery"].Value.ToString();
             model.SaveChanges();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -202,6 +211,21 @@ namespace ISUTechnicalService
                 maskedTextBox1.Text = customer.Phone;
             }
         }
+
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+            fill();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Stock stock = new Stock();
+            stock.Show();
+        }
+
+        }
+
     }
-    }
+
 
