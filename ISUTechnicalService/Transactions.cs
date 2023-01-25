@@ -23,6 +23,13 @@ namespace ISUTechnicalService
         private void txtIdentity_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+            if (e.KeyChar == (char)Keys.Enter) //Enter ile verileri getirir
+            {
+                e.Handled = true;
+                btnTransfer.PerformClick();
+                MessageBox.Show("Payment process completed successfully!");
+            }
         }
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
@@ -126,5 +133,7 @@ namespace ISUTechnicalService
             DeviceTroubleRecord DeviceRecord = new DeviceTroubleRecord();
             DeviceRecord.Show();
         }
+
+
     }
 }
